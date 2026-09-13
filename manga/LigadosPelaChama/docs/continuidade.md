@@ -1,0 +1,136 @@
+# Continuidade
+
+Este arquivo contém fatos estabelecidos e deve ser consultado antes de escrever cenas ou gerar arte.
+
+## Cânone atual
+
+- Ordan, a Fornalha Infernal, era leal ao Deus da Luz, mas foi corrompido pela loucura e tornou-se uma arma selvagem contida numa armadura quase totalmente fechada, com vazamentos de fogo e lava. Está aprisionado na capital de Valedorn. É um drake sem asas, bípede, esguio e laranja, com cerca de 2,5 metros e anatomia intermediária entre humano e besta; sem a armadura, veste trapos e possui cicatrizes de contenção. Lágrimas negras saem de seus olhos como sinal da loucura. Sua chama é a mais quente que já existiu, com núcleo branco-dourado. `ordan-v4.png` é sua referência visual canônica; as versões 1, 2 e 3 são históricas.
+- Iriane, a Santa de Vidro, é uma Grande General da Luz. Sua Vitrificação Sacra preserva vítimas vivas e conscientes; está aprisionada sob o Lago Partido, em Orvena. `iriane-v1.png` é sua referência visual canônica.
+- Thámer, o Jardineiro das Coroas, é um Grande General da Luz que cultiva ambição, autoridade e sucessão. Está aprisionado no Jardim das Coroas Mortas, sob o palácio de Kharvann, e coopera com Vael por enxergar os dez novos generais como coroas a cultivar. `thamer-v1.png` é sua referência visual canônica.
+- Sérad, o Juiz dos Juramentos, foi um Grande General da Luz. Criou a linhagem humana capaz de conter generais, enlouqueceu durante as experiências, foi selado pelo terceiro ramo da Ordem, escapou muitos anos antes da história, atravessou a Muralha para buscar vingança contra Vael e Míscar e foi morto. Pertence aos nove mortos; `serad-v1.png` é sua referência visual canônica.
+- Edras, o Último Bastião, foi um Grande General da Luz e está morto definitivamente. Era um músico enlouquecido que utilizava vários instrumentos, alternando entre combate de curta distância, disparos de longa distância, cura, ataque em área, uma técnica inevitável contra um único alvo e defesa. `edras-v1.png` é sua referência visual canônica e estabelece sua aparência, os seis instrumentos e o Coreto do Fim; limites detalhados e morte específica permanecem em desenvolvimento.
+- Tárion, o Trovão Branco, foi um Grande General da Luz e está morto definitivamente. Era um colosso imóvel de artilharia que conduzia tempestades entre céu e terra com uma alabarda monumental. Sua aparência, armadura de cerâmica marfim, Alabarda do Primeiro Relâmpago e manifestações visuais estão estabelecidas por `tarion-v2.png`; relação com Dargan e morte específica permanecem em desenvolvimento.
+- Nemeia, a Noiva do Último Sono, é uma Grande General das Trevas aprisionada sob as minas de Lúmara. Sua Núpcia do Último Sono conecta vítimas num sonho compartilhado construído com memórias e desejos reais. Escapar exige reconhecer a mentira e abandonar voluntariamente aquilo que o sonho devolveu. `nemeia-v1.png` é sua referência visual canônica.
+- Ossaur, o Almirante Afogado, é um Grande General das Trevas aprisionado sob Porto Âmbar, em Namaris. Sua Lei da Profundidade impõe pressão, corrente e sufocamento oceânico a qualquer espaço. `ossaur-v1.png` é sua referência visual canônica.
+- Ilvena, a Costureira de Almas, foi uma Grande General das Trevas e está entre os nove mortos. Seu domínio de fios suturava corpos e canais de Ânima, criando um paralelo com os vínculos de Sérad. `ilvena-v1.png` é sua referência visual canônica; regras detalhadas do poder e morte específica permanecem em desenvolvimento.
+- Selka, a Ferreira do Amanhecer, foi uma Grande General da Luz, e Zarekh, o Ferreiro do Ocaso, foi um Grande General das Trevas. Os dois estão mortos definitivamente e eram conhecidos como **Os Crepusculares**. Inspiraram as tradições dos ferreiros atuais e forjaram juntos grandes armas e relíquias, incluindo armamentos de outros Grandes Generais. `selka-v1.png` e `zarekh-v1.png` são suas referências visuais canônicas.
+
+- O mundo nasceu junto com dois deuses primordiais: Sombra e Luz.
+- `deuses-primordiais-v1.png` é a referência visual canônica das duas divindades. O Deus da Luz representa o sol e carrega uma lua escura junto ao coração; a Deusa das Sombras representa a lua e carrega um pequeno sol dourado. Os dois repousam em orientações complementares dentro de uma composição circular, separados por uma curva central, em estilo de afresco ritual com aquarela, tinta e folhas metálicas envelhecidas. Seus nomes próprios permanecem a definir.
+- Cada deus possuía dez Grandes Generais.
+- Dos vinte Grandes Generais, onze estão vivos e nove definitivamente mortos. Nove dos vivos possuem núcleos estáveis e participam da estrutura do ritual; Aster e Ulmar sobrevivem livres, com núcleos entrelaçados numa rota sem coordenada final. A maioria dos mortos caiu durante a guerra entre as divindades; Sérad foi selado no início do conflito e morreu posteriormente, antes da história. Aelyra está do lado dos heróis.
+- Vael é o mais poderoso dos vinte generais. Mesmo o mais fraco deles supera o mais forte dos personagens da atualidade do mundo; o parâmetro temporal e as condições dessa comparação ainda precisam ser detalhados.
+- Vael e Míscar estão livres desde o início da história. Enquanto os heróis investigam os Umbrais, Míscar disputa a libertação dos seis generais aprisionados no plano de fundo.
+- Os seis generais aprisionados sustentam seis grandes sagas. Ao final de cada uma, os heróis retornam à Vigília do Corvo, que funciona como base e lar recorrente.
+- A jornada de investigação segue Valedorn → Lúmara → Orvena → Namaris → Kharvann → Continente Negro. No Continente Negro, os heróis descobrem o plano de Vael, tentam detê-lo e fracassam; os seis generais aprisionados são libertos.
+- Reunindo os nove generais vivos cujos núcleos permanecem estáveis, um deles pode tornar-se um novo deus e nomear dez novos Grandes Generais. Vael pretende ascender. Aster e Ulmar não podem substituir Aelyra porque o ritual e o Relicário não conseguem fixar seus núcleos errantes.
+- Aelyra, selada dentro de Mira, é a última peça necessária. Depois do fracasso no Continente Negro, os dois lados correm de volta para Valedorn.
+- Míscar e Mira terão um confronto decisivo na Vigília do Corvo durante o retorno do Continente Negro; execução, desfecho e papel exato das Chamas da Esperança permanecem em aberto.
+- A batalha final acontece em Aurivela, capital de Valedorn. Mira é inicialmente impedida de lutar porque sua captura completaria o ritual e se sente profundamente desconfortável ao ver todos dispostos a morrer por ela; a execução da batalha permanece em aberto.
+- Quinze anos antes do início, Míscar encontrou a portadora de Aelyra, matou o pai de Mira e atacou sua mãe durante a gestação. Aelyra interveio, impressionada pela força com que a mãe protegeu a filha. A mãe deu à luz e morreu no parto.
+- O ataque de Míscar marcou Mira e fez dela um receptáculo imperfeito, tornando a assinatura divina de Aelyra rastreável conforme a Muralha enfraqueceu.
+- Aelyra decidiu manter Mira viva e desenvolveu por ela, ao longo de quinze anos, um apego protetor quase materno, sem perder sua arrogância e petulância.
+- O pai de Mira preparou ou reforçou o selo antes de morrer; a magia persistiu depois dele e não depende de ele estar vivo.
+- Os dez generais do Deus da Luz são Aelyra, Ordan, Iriane, Thámer, Sérad, Edras, Tárion, Selka, Liora e Aster. Os dez da Deusa das Sombras são Vael, Míscar, Dargan, Nemeia, Ossaur, Ilvena, Zarekh, Ulmar, Hadrun e Véspera. Sérad, Edras, Tárion, Selka, Liora, Ilvena, Zarekh, Hadrun e Véspera estão mortos; Aster e Ulmar estão vivos e livres.
+- Liora, a Primeira Aurora, pertenceu ao Deus da Luz e está morta definitivamente. Seu nome, título, afiliação, destino geral e aparência estão estabelecidos; `liora-v1.png` é sua referência visual canônica. Regras detalhadas do domínio sobre princípios, loucura e morte específica permanecem em desenvolvimento.
+- Aster, o Cartógrafo Celeste, pertence ao Deus da Luz e está vivo e livre. É canonicamente um cachorro antropomórfico bípede com aproximadamente metade da altura de um humano adulto, e `aster-v1.png` é sua referência visual canônica.
+- Ulmar, o Peregrino Sem Norte, pertence à Deusa das Sombras e está vivo e livre. É canonicamente um gato alado peregrino que rouba os mapas de Aster, e `ulmar-v1.png` é sua referência visual canônica. O antigo conceito **Boca do Inverno** foi descartado.
+- Aster e Ulmar sobreviveram à guerra ao entrelaçar seus núcleos numa rota sem coordenada final. Foram considerados mortos porque mapas, selos e percepções divinas deixaram de localizá-los. O Relicário e o ritual não conseguem fixá-los, preservando Aelyra como a nona peça estável indispensável.
+- Hadrun, o Cão do Sepulcro, foi um Grande General das Trevas de forma humana e está morto definitivamente. Bebia constantemente porque escutava os últimos pensamentos dos mortos e conseguia usar habilidades daqueles que já se foram. O título é metafórico; Hadrun nunca foi um cão. Vael o detestava. `hadrun-v1.png` é sua referência visual canônica; limites detalhados do poder, história e morte específica permanecem em desenvolvimento.
+- Véspera, a Guardiã dos Nomes, foi uma Grande General das Trevas e está morta definitivamente. Possuía vários braços humanos dispostos como os de uma aranha, extraía poder dos nomes e conseguia reescrevê-los usando pincéis, lápis, penas, estiletes e outros instrumentos de escrita como armas. Quantidade exata de braços, regras detalhadas, aparência e morte específica permanecem em desenvolvimento.
+- Um general da Sombra traiu e matou sua deusa quando ela estava enfraquecida.
+- O cadáver da Deusa das Sombras corrompeu o Continente Negro.
+- O Traidor matou o Deus da Luz e selou seu corpo em outra dimensão.
+- O Traidor enlouqueceu e foi derrotado pelos generais restantes.
+- O poder divino pode persistir através dos milênios. Onze generais estão vivos e nove definitivamente mortos; a maioria dos mortos caiu na guerra e Sérad morreu posteriormente. Nove vivos possuem núcleos estáveis, enquanto Aster e Ulmar possuem núcleos errantes entrelaçados. A antiga formulação de persistência universal de consciência foi revista por essa decisão. A diferença mecânica entre morte definitiva e selamento ainda será definida.
+- Um aliado do Traidor retornou e desperta generais enlouquecidos.
+- Esse aliado, Míscar, é o antagonista visível da jornada; Vael é o vilão final.
+- A Fênix se chama Aelyra. É uma Grande General feminina da Luz, consciente e não enlouquecida.
+- A Fênix é transmitida por uma linhagem que só gera filhas; cada mãe morre no parto.
+- A protagonista se chama Mira. Tem 15 anos, cabelos escuros, foi criada numa guilda próxima às montanhas e luta corpo a corpo com chamas.
+- Mira foi entregue ainda bebê à Vigília do Corvo e não conhece seu sobrenome familiar.
+- Quando precisa de um nome completo, usa “Mira Vigília Corvo” como afiliação; algumas pessoas a chamam de “Corvo”.
+- A Vigília do Corvo é uma companhia de mercenários legalizada pelo governo de Valedorn.
+- Sua sede é o Solar da Vigília, um pequeno castelo gótico próximo à cidade de Rochafria, no pé da Muralha de Cinza.
+- A protagonista é alegre, curiosa, adora conhecer o mundo e fala tanto que pode irritar as pessoas.
+- A protagonista começa sem saber que carrega a Fênix.
+- Criaturas do Continente Negro atacam a guilda apesar da proteção das montanhas.
+- Essas criaturas são chamadas oficialmente de Umbrais.
+- Umbrais são matéria sem alma e devoram Ânima para tentar preencher sua ferida em crescente.
+- O Umbral Pleno é a classe mais elevada: possui forma humana, olhos, fala própria, cicatriz lunar e identidade construída com fragmentos das vidas devoradas.
+- As classes Umbral Menor, Umbral Alado, Umbral Devorador e Grande Umbral possuem concept arts de versão 1, ainda aguardando aprovação canônica.
+- Uma criatura diz à protagonista que o mundo está acabando.
+- Essa criatura é um Umbral Menor a meio caminho da ascensão.
+- Valedorn e Kharvann conquistaram o sul juntos.
+- Lúmara, Orvena e Namaris possuem governos fantoches.
+- O nome **Península de Arkenor** é canônico.
+- A Península de Arkenor possui aproximadamente o tamanho da Península Ibérica.
+- `peninsula-de-arkenor-v2.png` é a referência visual canônica e vigente do mapa.
+- Pedra saturada de Ânima é extraída no sul ocupado e utilizada na substituição dos selos antigos da Muralha de Cinza.
+- Os substitutos artificiais estão falhando; a exploração colonial é causa direta da invasão.
+- O conhecimento sobre Umbrais é proibido em toda a península e ocorrências anteriores foram ocultadas.
+- O Traidor se chama Vael. Parece ter 18 anos, tem cabelos escuros, aparência de ceifeiro e usa uma foice.
+- O Traidor é distante, frio e de poucas palavras; raramente revela uma feição tomada pela loucura.
+- O aliado retornado se chama Míscar e é conhecido como o Homem Sorridente. É totalmente branco, não possui rosto além de um sorriso, usa terno e cartola e porta uma bengala ou muleta com uma espada oculta.
+- O Homem do Sorriso é caricato, exibido, fala gritando, não valoriza a vida e transforma violência em espetáculo.
+- O Homem do Sorriso era apaixonado pela Fênix. Ela sempre sentiu repulsa por ele.
+- Ele persegue as sucessivas portadoras da Fênix para tentar “reaver” seu antigo amor.
+- Despertar generais e sabotar os selos servem a um único objetivo de Míscar: romper o selo hereditário e arrancar Aelyra da linhagem.
+- Cada general despertado por Míscar rompe uma camada diferente do selo de Aelyra.
+- Míscar conduziu os Umbrais até o Solar porque Mira estava ali; o ataque não foi um acidente.
+- As concept arts `mira/mira-v1.png`, `aelyra/aelyra-v1.png`, `vael/vael-v1.png` e `miscar/miscar-v1.png` são as referências visuais canônicas atuais.
+- Textos e nomes inventados dentro das folhas de concept art não fazem parte do cânone.
+- Usuários de chama podem manifestar mais de um tipo de fogo.
+- Toda criatura viva possui Ânima. O coração a ancora, renova e impulsiona pelas veias.
+- Exteriorizar Ânima permite convertê-la em energia ou matéria numa forma ligada à identidade do usuário.
+- O uso excessivo causa frio, tremores, pulso lento, confusão e, no limite, parada cardíaca.
+- Mira inicialmente não sofre esse custo porque o selo utiliza Aelyra como combustível.
+- Existem chamas comuns, Chamas da Ira azuis, Chamas da Tristeza negras, Chamas da Esperança douradas e Chamas da Vida brancas.
+- Usar as Chamas da Vida mata o usuário.
+- As Chamas da Vida convertem toda a Ânima disponível e destroem a capacidade do coração de renová-la.
+- Mira usa as Chamas da Vida depois de enfrentar Vael e perder.
+- Aelyra entrega a própria vida para impedir que Mira morra após essa técnica.
+- O poder usado por Mira até esse momento não era verdadeiramente dela: vinha de um selo colocado por seu pai, que utilizava Aelyra como combustível.
+- Depois de anos sob o selo e da perda de Aelyra, Mira desperta as próprias Chamas Puras e as usa para derrotar o vilão final.
+- As Chamas Puras possuem núcleo branco e manifestam as sete cores do arco-íris em correntes distintas que se unem durante os golpes.
+- As chamas emocionais de Mira são desbloqueadas por decisões transformadoras: ira convertida em proteção, tristeza aceita e esperança escolhida pelo grupo.
+- `mira-chama-pura-v2.png` é a referência visual canônica das Chamas Puras; a versão 1 permanece apenas como histórico.
+- Garran Holt, Maela Voss, Brina Calder e Téo Rusk possuem concept arts de versão 1, ainda aguardando aprovação visual.
+- O Solar da Vigília possui uma prancha arquitetônica de versão 1, ainda aguardando aprovação da distribuição proposta.
+- Enfermaria de Maela, salão de contratos, praça de Rochafria e botica possuem concept arts de versão 1, ainda aguardando aprovação visual.
+- As 16 páginas do piloto possuem storyboard colorido. As páginas 1 e 3 estão aprovadas; as páginas 2 e 4 usam versão 4, a página 6 usa versão 3 e as páginas 5 e 7–16 usam versão 1. Todas, exceto 1 e 3, aguardam aprovação.
+- O grupo futuro inclui um rapaz elétrico, um rapaz de gelo, uma desertora usuária de luz e uma garota que canaliza Ânima numa katana. Todos permanecem sem nome.
+- Dargan, o Rei de Joelhos, é o Grande General da gravidade. Está selado num receptáculo que perde o controle e provoca o desastre no qual morre a família do rapaz elétrico. Sem saber da existência de Dargan, o rapaz busca vingança contra o receptáculo.
+- O receptáculo de Dargan se chama Narel e pertence ao ramo inferior de uma linhagem humana hereditária criada para conter Grandes Generais. O ramo superior monopolizou o sobrenome e o poder político, enquanto usava parentes distantes como recipientes.
+- Narel e Mira são parentes distantes pelo lado materno. Embora o parentesco sanguíneo seja remoto, suas Ânimas compartilham a estrutura que permite conter entidades divinas.
+- Alguns integrantes do ramo superior foram seduzidos pelas ofertas de Vael e entregaram o ramo inferior da Ordem do Véu Cinzento.
+- A Ordem possuía um terceiro ramo oculto. Está em desenvolvimento a proposta de que ele guardava Sérad, um general da Luz que criou a linhagem de receptáculos, enlouqueceu durante as experiências, escapou muitos anos antes da história, atravessou a Muralha para buscar vingança contra Vael e Míscar e foi morto.
+- `dargan-v1.png` e `receptaculo-de-dargan-v1.png` são as referências visuais canônicas atuais.
+- `selos-mira-narel-v1.png` é a referência visual canônica dos selos. O de Mira fica no umbigo, formado por chama ou ovo e penas incompletas, conduz energia ao coração e possui uma ruptura negra no lado esquerdo deixada por Míscar. O de Narel fica entre as escápulas, com círculos concêntricos atravessados por uma linha vertical ao longo da coluna.
+- Cada país revela uma camada da mesma conspiração: negação em Valedorn, custo humano em Lúmara, colusão em Orvena, finalidade em Namaris e origem em Kharvann.
+- O objeto usado pelos heróis chama-se **Relicário do Trono Vazio**. Seus nove aros recolhem os núcleos conscientes e espacialmente estáveis de generais sobreviventes derrotados; ele não captura almas comuns, não fixa Aster ou Ulmar e não ressuscita os nove mortos.
+- Vael não consegue atravessar fisicamente a Muralha. Uma projeção de sombra disfarçada de velho conselheiro da corte entrega o Relicário aos heróis depois que eles ajudam o rei, apresentando-o falsamente como instrumento de contenção.
+- A Muralha de Cinza é a cadeia montanhosa transformada num organismo mágico de Luz e Sombra. Aurivela está sobre seu centro, o **Coração Cinzento**, e a Vigília sobre um nó secundário.
+- Durante quinze anos, Vael manipulou governos, guerras, ocupação, mineração e troca dos selos para enfraquecer a península e abrir falhas na Muralha. Ele explorou ambições existentes; as nações continuam responsáveis por suas decisões.
+- Sem uma divindade de origem, os núcleos dos generais se degradam e sua loucura se agrava. Vael promete estabilizá-los e reconduzi-los como generais depois de ascender.
+
+## Propostas ainda não confirmadas
+
+- Todos os demais nomes geográficos atuais; Arkenor já está estabelecido.
+- O selo consome a Ânima regenerada por Aelyra, preservando seu núcleo consciente até o sacrifício.
+- Um Umbral Pleno mantém a forma por meio de um falso coração feito de Ânima roubada.
+- As aparências mostradas em `garran-holt-v1.png`, `maela-voss-v1.png`, `brina-calder-v1.png` e `teo-rusk-v1.png`.
+- A orientação espacial e a arquitetura mostradas em `solar-da-vigilia-v1.png`.
+
+## Decisões necessárias
+
+- Direção de leitura de uma edição futura: o piloto está fixado em ordem ocidental, da esquerda para a direita; uma edição japonesa exigiria rediagramação.
+- O letreiramento segue `docs/guia-de-letreiramento.md`: diálogo humano usa uma família comum; gritos, narração, efeitos e vozes sobrenaturais recebem tratamentos próprios. A cor nunca é o único marcador de voz ou emoção.
+- Nomes dos dois deuses.
+- Tempo transcorrido desde a conquista do sul.
+- Situação da guilda após o ataque e quem sobrevive.
+- Motivo verdadeiro da guerra entre os deuses.
+- Nomes e fichas completas dos quatro futuros companheiros.
+- Identidade e natureza exata do general ou hospedeiro de gravidade.
+- Nomenclatura para exteriorização, manifestação e usuários de Ânima.
+- Alcance do dreno de Ânima dos Umbrais.

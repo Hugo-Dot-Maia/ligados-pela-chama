@@ -1,0 +1,30 @@
+# Dependências e saídas geradas pelo leitor
+node_modules/
+leitor/dist/
+leitor/.astro/
+leitor/.cache/
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+
+# Logs e temporários
+*.log
+npm-debug.log*
+*.tmp
+*.bak
+~$*
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Configurações locais do Claude Code
+.claude/settings.local.json
