@@ -52,6 +52,8 @@ Este arquivo contém fatos estabelecidos e deve ser consultado antes de escrever
 - Quando precisa de um nome completo, usa “Mira Vigília Corvo” como afiliação; algumas pessoas a chamam de “Corvo”.
 - A Vigília do Corvo é uma companhia de mercenários legalizada pelo governo de Valedorn.
 - Sua sede é o Solar da Vigília, um pequeno castelo gótico próximo à cidade de Rochafria, no pé da Muralha de Cinza.
+- Valedorn ergueu fortalezas ao longo da Muralha de Cinza para enfrentar uma ameaça que, por gerações, pareceu nunca chegar; com o tempo, parte dessas fortalezas foi desativada e parte permaneceu com guarnições reduzidas.
+- As guildas próximas da Muralha receberam progressivamente menos atenção, contratos, recursos e prestígio do que as guildas situadas no interior do reino.
 - A protagonista é alegre, curiosa, adora conhecer o mundo e fala tanto que pode irritar as pessoas.
 - A protagonista começa sem saber que carrega a Fênix.
 - Criaturas do Continente Negro atacam a guilda apesar da proteção das montanhas.

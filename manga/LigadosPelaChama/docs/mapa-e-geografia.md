@@ -36,6 +36,16 @@ Valedorn participou, ao lado de Kharvann, da conquista conjunta do sul. Exerce m
 
 Rochafria é uma pequena cidade situada no pé da Muralha de Cinza. Nas proximidades, a Vigília do Corvo mantém sua sede num pequeno castelo gótico chamado Solar da Vigília. A guilda atua como companhia de mercenários legalizada pelo governo de Valedorn.
 
+### Fortalezas e guildas da Muralha — estabelecido
+
+Valedorn ergueu fortalezas ao longo da Muralha de Cinza para proteger o reino de uma ameaça que, durante gerações, pareceu nunca chegar. A longa ausência de invasões transformou a defesa ocidental em símbolo de um perigo considerado antigo, exagerado ou encerrado. Parte das fortalezas foi desativada e outras continuaram operando com guarnições reduzidas.
+
+O mesmo processo afetou as guildas próximas das montanhas. Companhias como a Vigília do Corvo receberam cada vez menos atenção, contratos, recursos e prestígio, enquanto guildas situadas no interior passaram a concentrar investimentos e oportunidades. Essa negligência ajuda a explicar por que os primeiros sinais da falha da Muralha não recebem resposta proporcional do reino.
+
+A quantidade, a posição, os nomes e o estado individual das fortalezas ainda serão definidos. O [mapa regional de Valedorn v3](../imagens/mapa/valedorn/valedorn-regional-v3.md) representa a proposta visual vigente, com o rio de fronteira desembocando no Lago Partido e os limites com Kharvann, Lúmara e Orvena.
+
+O [mapa de Rochafria e da Marca Cinzenta v1](../imagens/mapa/valedorn/rochafria-marca-cinzenta-v1.md) aproxima a região da Vigília e propõe trilhas, cursos d'água, ruínas defensivas e uma estrada mantida em direção a Aurivela.
+
 ## Império de Kharvann — provisório
 
 Potência marítima e imperial do nordeste. Possui a maior frota da península e controla boa parte do comércio no Golfo das Coroas. Sua aristocracia militar emprega magos como oficiais, navegadores e engenheiros de cerco.
@@ -137,3 +147,7 @@ Mar ocidental, frio e perigoso. Cinzas vindas de Nocthar às vezes cobrem suas �
 - `../imagens/referencias/esboco-mapa-original.png`: esboço fornecido pelo autor.
 - `../imagens/mapa/peninsula-de-vhaleria-v1.png`: versão histórica com o nome provisório substituído.
 - `../imagens/mapa/peninsula-de-arkenor-v2.png`: versão visual canônica e vigente do mapa da Península de Arkenor.
+- `../imagens/mapa/valedorn/valedorn-regional-v1.png`: versão histórica; a margem oriental parecia litoral em vez da fronteira fluvial com Kharvann.
+- `../imagens/mapa/valedorn/valedorn-regional-v2.png`: versão histórica; mostra Kharvann em terra firme, mas posiciona incorretamente o Lago Partido dentro de Valedorn.
+- `../imagens/mapa/valedorn/valedorn-regional-v3.png`: proposta visual vigente; o rio fronteiriço termina no Lago Partido e Lúmara e Orvena aparecem ao sul.
+- `../imagens/mapa/valedorn/rochafria-marca-cinzenta-v1.png`: proposta visual local de Rochafria, do Solar da Vigília e das antigas defesas da Marca Cinzenta.

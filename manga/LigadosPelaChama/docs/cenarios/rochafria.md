@@ -6,6 +6,8 @@
 
 Pequena cidade de Valedorn situada ao pé da Muralha de Cinza, a cerca de quinze minutos de caminhada do Solar da Vigília.
 
+O [mapa de Rochafria e da Marca Cinzenta v1](../../imagens/mapa/valedorn/rochafria-marca-cinzenta-v1.md) apresenta uma proposta visual para a região, suas estradas, riachos e defesas abandonadas.
+
 ## Economia
 
 - Mineração em pequena escala.
