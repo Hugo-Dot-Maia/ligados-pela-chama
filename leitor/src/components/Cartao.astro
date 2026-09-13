@@ -1,0 +1,40 @@
+---
+import type { ImageMetadata } from 'astro';
+import type { Status } from '../lib/conteudo';
+import { otimizar } from '../lib/markdown';
+import Selo from './Selo.astro';
+
+interface Props {
+  href: string;
+  titulo: string;
+  subtitulo?: string;
+  detalhe?: string;
+  img?: ImageMetadata;
+  status?: Status;
+  statusTexto?: string;
+  historico?: boolean;
+  formato?: 'paisagem' | 'retrato';
+}
+
+const { href, titulo, subtitulo, detalhe, img, status = 'nenhum', statusTexto, historico = false, formato = 'paisagem' } =
+  Astro.props;
+const mini = img ? await otimizar(img, 720, 80) : undefined;
+---
+
+<a href={href} class:list={['cartao', `cartao-${formato}`, { 'item-historico': historico }]}>
+  <div class="cartao-imagem">
+    {
+      mini ? (
+        <img src={mini.src} width={mini.width} height={mini.height} alt="" loading="lazy" />
+      ) : (
+        <span class="cartao-vazio">{titulo.charAt(0)}</span>
+      )
+    }
+    <Selo status={status} texto={statusTexto} />
+  </div>
+  <div class="cartao-texto">
+    <strong>{titulo}</strong>
+    {subtitulo && <span class="cartao-sub">{subtitulo}</span>}
+    {detalhe && <span class="cartao-detalhe">{detalhe}</span>}
+  </div>
+</a>

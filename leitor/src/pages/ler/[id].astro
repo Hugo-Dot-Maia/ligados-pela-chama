@@ -1,0 +1,455 @@
+---
+import Base from '../../layouts/Base.astro';
+import { catalogo, rotuloStatus } from '../../lib/conteudo';
+import { otimizar, renderizarMd } from '../../lib/markdown';
+
+export function getStaticPaths() {
+  return catalogo().leituras.map((l) => ({ params: { id: l.id } }));
+}
+
+const { leituras } = catalogo();
+const indice = leituras.findIndex((l) => l.id === Astro.params.id);
+const leitura = leituras[indice];
+const seguinte = leituras[indice + 1];
+
+const paginas = await Promise.all(
+  leitura.paginas.map(async (p) => ({
+    numero: p.numero,
+    titulo: p.titulo ?? '',
+    status: p.status,
+    rotulo: rotuloStatus(p.status, 'pagina'),
+    statusTexto: p.statusTexto,
+    final: await otimizar(p.final.img, 1800, 90),
+    storyboard: p.storyboard ? await otimizar(p.storyboard.img, 1800, 90) : null,
+    mini: await otimizar(p.final.img, 260, 75),
+    notas: p.md ? await renderizarMd(p.md, { semImagens: true }) : '',
+  })),
+);
+
+const dados = {
+  id: leitura.id,
+  titulo: leitura.titulo,
+  paginas: paginas.map(({ notas, ...resto }) => resto),
+};
+const json = JSON.stringify(dados).replace(/</g, '\\u003c');
+const temStoryboard = paginas.some((p) => p.storyboard);
+---
+
+<Base titulo={`Ler ${leitura.titulo}`} leitor>
+  <div class="leitor" id="leitor">
+    <div class="leitor-palco" id="palco">
+      <div class="espalhamento" id="espalhamento"></div>
+    </div>
+
+    <header class="leitor-barra">
+      <a class="botao-icone" href={leitura.url} title="Voltar à visão geral (Esc)">← Voltar</a>
+      <div class="leitor-titulo">
+        <strong>{leitura.titulo}</strong>
+        <span id="indicador"></span>
+      </div>
+      <div class="leitor-acoes">
+        <button class="botao-icone" id="b-modo" title="Alternar página única e dupla (1 / 2)"></button>
+        <button class="botao-icone" id="b-capa" title="Primeira página sozinha — muda como as páginas formam pares (C)"
+          >Capa sozinha</button
+        >
+        {
+          temStoryboard && (
+            <button class="botao-icone" id="b-versao" title="Alternar letreirada e storyboard sem texto (S)">
+              Letreirada
+            </button>
+          )
+        }
+        <button class="botao-icone" id="b-notas" title="Roteiro, diálogos e status das páginas visíveis (N)">Notas</button>
+        <button class="botao-icone" id="b-grade" title="Ver todas as páginas (G)">Páginas</button>
+        <button class="botao-icone" id="b-tela" title="Tela cheia (F)">⛶</button>
+        <button class="botao-icone" id="b-ajuda" title="Atalhos de teclado (?)">?</button>
+      </div>
+    </header>
+
+    <footer class="leitor-rodape">
+      <span id="rodape-inicio">1</span>
+      <input type="range" id="progresso" min="1" max={paginas.length} value="1" aria-label="Página" />
+      <span>{paginas.length}</span>
+    </footer>
+
+    <aside class="leitor-notas" id="notas" hidden>
+      <div class="notas-cabecalho">
+        <strong style="font-family: var(--fonte-titulo); font-size: 1.3rem">Notas da página</strong>
+        <button class="botao-icone" id="b-fechar-notas" title="Fechar (N)">✕</button>
+      </div>
+      <div id="notas-conteudo"></div>
+    </aside>
+
+    <div class="leitor-sobreposicao" id="grade" hidden>
+      <div class="leitor-grade-paginas">
+        {
+          paginas.map((p, i) => (
+            <button class="miniatura" data-ir={i} title={p.statusTexto}>
+              <img src={p.mini.src} width={p.mini.width} height={p.mini.height} alt="" loading="lazy" />
+              <span>
+                {p.numero}
+                {p.titulo && ` · ${p.titulo}`}
+              </span>
+              {p.rotulo && <span class={`selo selo-${p.status}`}>{p.rotulo}</span>}
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="leitor-sobreposicao" id="ajuda" hidden>
+      <div class="cartao-central">
+        <h2>Atalhos</h2>
+        <dl class="teclas">
+          <dt><kbd>→</kbd> <kbd>Espaço</kbd> <kbd>D</kbd></dt><dd>Avançar (ou clique na metade direita)</dd>
+          <dt><kbd>←</kbd> <kbd>Shift+Espaço</kbd> <kbd>A</kbd></dt><dd>Voltar (ou clique na metade esquerda)</dd>
+          <dt><kbd>Home</kbd> <kbd>End</kbd></dt><dd>Primeira e última página</dd>
+          <dt><kbd>1</kbd> <kbd>2</kbd></dt><dd>Página única ou dupla</dd>
+          <dt><kbd>C</kbd></dt><dd>Primeira página sozinha: desloca os pares</dd>
+          {temStoryboard && <><dt><kbd>S</kbd></dt><dd>Letreirada ou storyboard sem texto</dd></>}
+          <dt><kbd>N</kbd></dt><dd>Notas: roteiro, diálogos e status</dd>
+          <dt><kbd>G</kbd></dt><dd>Todas as páginas</dd>
+          <dt><kbd>F</kbd></dt><dd>Tela cheia</dd>
+          <dt><kbd>Esc</kbd></dt><dd>Fechar painel ou voltar</dd>
+        </dl>
+        <div class="acoes"><button class="botao" data-fechar>Entendi</button></div>
+      </div>
+    </div>
+
+    <div class="leitor-sobreposicao" id="fim" hidden>
+      <div class="cartao-central">
+        <span class="rotulo-tipo">Fim</span>
+        <h2>{leitura.titulo}</h2>
+        <p style="color: var(--texto-suave)">Você chegou à última página.</p>
+        <div class="acoes">
+          <button class="botao botao-secundario" id="b-recomecar">Recomeçar</button>
+          <a class="botao botao-secundario" href={leitura.url}>Visão geral</a>
+          {seguinte && <a class="botao" href={seguinte.urlLer}>Próxima: {seguinte.titulo}</a>}
+        </div>
+      </div>
+    </div>
+
+    {paginas.map((p) => <template data-notas={p.numero} set:html={p.notas}></template>)}
+    <script type="application/json" id="dados-leitura" set:html={json}></script>
+  </div>
+</Base>
+
+<script>
+  interface Imagem {
+    src: string;
+    width: number;
+    height: number;
+  }
+  interface Pagina {
+    numero: number;
+    titulo: string;
+    status: string;
+    rotulo: string;
+    statusTexto: string;
+    final: Imagem;
+    storyboard: Imagem | null;
+    mini: Imagem;
+  }
+  interface Preferencias {
+    modo: 'dupla' | 'unica';
+    capaSozinha: boolean;
+    versao: 'final' | 'storyboard';
+  }
+
+  const $ = (id: string) => document.getElementById(id) as HTMLElement;
+  const dados = JSON.parse($('dados-leitura').textContent!) as { id: string; titulo: string; paginas: Pagina[] };
+  const paginas = dados.paginas;
+  const leitor = $('leitor');
+  const espalhamento = $('espalhamento');
+  const indicador = $('indicador');
+  const progresso = $('progresso') as HTMLInputElement;
+  const notas = $('notas');
+  const grade = $('grade');
+  const ajuda = $('ajuda');
+  const fim = $('fim');
+  const bModo = $('b-modo');
+  const bCapa = $('b-capa');
+  const bVersao = document.getElementById('b-versao');
+  const bNotas = $('b-notas');
+
+  const guardar = (chave: string, valor: string) => {
+    try {
+      localStorage.setItem(chave, valor);
+    } catch {}
+  };
+  const recuperar = (chave: string) => {
+    try {
+      return localStorage.getItem(chave);
+    } catch {
+      return null;
+    }
+  };
+
+  const prefs: Preferencias = {
+    modo: 'dupla',
+    capaSozinha: true,
+    versao: 'final',
+    ...JSON.parse(recuperar('leitor:preferencias') ?? '{}'),
+  };
+  const salvarPrefs = () => guardar('leitor:preferencias', JSON.stringify(prefs));
+
+  let atual = 0;
+
+  const espalhamentos = (): number[][] => {
+    const lista: number[][] = [];
+    if (prefs.modo === 'unica') return paginas.map((_, i) => [i]);
+    let i = 0;
+    if (prefs.capaSozinha) {
+      lista.push([0]);
+      i = 1;
+    }
+    for (; i < paginas.length; i += 2) lista.push(i + 1 < paginas.length ? [i, i + 1] : [i]);
+    return lista;
+  };
+
+  const indiceDe = (lista: number[][], pagina: number) => lista.findIndex((e) => e.includes(pagina));
+
+  const imagemDe = (p: Pagina) => (prefs.versao === 'storyboard' && p.storyboard ? p.storyboard : p.final);
+
+  const preCarregar = (grupo: number[] | undefined) => {
+    grupo?.forEach((i) => {
+      new Image().src = imagemDe(paginas[i]).src;
+    });
+  };
+
+  const atualizarNotas = (grupo: number[]) => {
+    if (notas.hidden) return;
+    const destino = $('notas-conteudo');
+    destino.replaceChildren();
+    for (const i of grupo) {
+      const p = paginas[i];
+      const bloco = document.createElement('section');
+      bloco.className = 'nota-pagina';
+      const status = document.createElement('div');
+      status.className = 'nota-status';
+      if (p.rotulo) {
+        const selo = document.createElement('span');
+        selo.className = `selo selo-${p.status}`;
+        selo.textContent = p.rotulo;
+        status.append(selo);
+      }
+      const texto = document.createElement('span');
+      texto.textContent = p.statusTexto;
+      status.append(texto);
+      const md = document.createElement('div');
+      md.className = 'md';
+      const modelo = document.querySelector<HTMLTemplateElement>(`template[data-notas="${p.numero}"]`);
+      if (modelo?.innerHTML.trim()) md.append(modelo.content.cloneNode(true));
+      else md.innerHTML = `<h2>Página ${p.numero}</h2><p>Sem notas para esta página.</p>`;
+      bloco.append(status, md);
+      destino.append(bloco);
+    }
+    notas.scrollTop = 0;
+  };
+
+  const render = () => {
+    const lista = espalhamentos();
+    const grupo = lista[indiceDe(lista, atual)];
+    atual = grupo[0];
+
+    espalhamento.replaceChildren(
+      ...grupo.map((i) => {
+        const fonte = imagemDe(paginas[i]);
+        const img = new Image(fonte.width, fonte.height);
+        img.src = fonte.src;
+        img.alt = `Página ${paginas[i].numero}`;
+        img.draggable = false;
+        return img;
+      }),
+    );
+    espalhamento.classList.toggle('dupla', grupo.length === 2);
+
+    const numeros = grupo.map((i) => paginas[i].numero);
+    const titulos = grupo.map((i) => paginas[i].titulo).filter(Boolean);
+    indicador.textContent =
+      (numeros.length === 2 ? `Páginas ${numeros[0]}–${numeros[1]}` : `Página ${numeros[0]}`) +
+      ` de ${paginas.length}` +
+      (titulos.length ? ` · ${titulos.join(' / ')}` : '');
+    progresso.value = String(grupo.at(-1)! + 1);
+    $('rodape-inicio').textContent = String(numeros[0]);
+
+    bModo.textContent = prefs.modo === 'dupla' ? 'Dupla' : 'Única';
+    bModo.classList.toggle('ligado', prefs.modo === 'dupla');
+    bCapa.classList.toggle('ligado', prefs.capaSozinha);
+    bCapa.hidden = prefs.modo === 'unica';
+    if (bVersao) {
+      bVersao.textContent = prefs.versao === 'storyboard' ? 'Storyboard' : 'Letreirada';
+      bVersao.classList.toggle('ligado', prefs.versao === 'storyboard');
+    }
+    bNotas.classList.toggle('ligado', !notas.hidden);
+    grade.querySelectorAll('.miniatura').forEach((m, i) => m.classList.toggle('atual', grupo.includes(i)));
+
+    history.replaceState(null, '', `#p=${numeros[0]}`);
+    guardar(`leitor:${dados.id}`, String(numeros[0]));
+    atualizarNotas(grupo);
+    const pos = indiceDe(lista, atual);
+    preCarregar(lista[pos + 1]);
+    preCarregar(lista[pos - 1]);
+  };
+
+  const irPara = (pagina: number) => {
+    atual = Math.max(0, Math.min(paginas.length - 1, pagina));
+    render();
+  };
+
+  const avancar = (delta: number) => {
+    const lista = espalhamentos();
+    const destino = indiceDe(lista, atual) + delta;
+    if (destino >= lista.length) {
+      fim.hidden = false;
+      return;
+    }
+    if (destino < 0) return;
+    irPara(lista[destino][0]);
+  };
+
+  const sobreposicoes = [grade, ajuda, fim];
+  const fecharSobreposicoes = () => {
+    const havia = sobreposicoes.some((s) => !s.hidden);
+    sobreposicoes.forEach((s) => (s.hidden = true));
+    return havia;
+  };
+  const alternar = (el: HTMLElement) => {
+    const abrir = el.hidden;
+    fecharSobreposicoes();
+    el.hidden = !abrir;
+  };
+
+  const alternarNotas = () => {
+    notas.hidden = !notas.hidden;
+    render();
+  };
+
+  const definirModo = (modo: Preferencias['modo']) => {
+    prefs.modo = modo;
+    salvarPrefs();
+    render();
+  };
+
+  const alternarTelaCheia = () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen().catch(() => {});
+  };
+
+  // Posição inicial: âncora da URL, depois a última página lida.
+  const paginaDaUrl = () => {
+    const n = Number(location.hash.match(/p=(\d+)/)?.[1]);
+    const i = paginas.findIndex((p) => p.numero === n);
+    return i >= 0 ? i : null;
+  };
+  const salva = Number(recuperar(`leitor:${dados.id}`));
+  const inicial = paginaDaUrl() ?? Math.max(0, paginas.findIndex((p) => p.numero === salva));
+  irPara(inicial);
+
+  addEventListener('hashchange', () => {
+    const i = paginaDaUrl();
+    if (i !== null && i !== atual) irPara(i);
+  });
+
+  // Controles
+  bModo.addEventListener('click', () => definirModo(prefs.modo === 'dupla' ? 'unica' : 'dupla'));
+  bCapa.addEventListener('click', () => {
+    prefs.capaSozinha = !prefs.capaSozinha;
+    salvarPrefs();
+    render();
+  });
+  bVersao?.addEventListener('click', () => {
+    prefs.versao = prefs.versao === 'final' ? 'storyboard' : 'final';
+    salvarPrefs();
+    render();
+  });
+  bNotas.addEventListener('click', alternarNotas);
+  $('b-fechar-notas').addEventListener('click', alternarNotas);
+  $('b-grade').addEventListener('click', () => alternar(grade));
+  $('b-ajuda').addEventListener('click', () => alternar(ajuda));
+  $('b-tela').addEventListener('click', alternarTelaCheia);
+  $('b-recomecar').addEventListener('click', () => {
+    fim.hidden = true;
+    irPara(0);
+  });
+  ajuda.querySelector('[data-fechar]')!.addEventListener('click', () => (ajuda.hidden = true));
+  progresso.addEventListener('input', () => irPara(Number(progresso.value) - 1));
+
+  grade.addEventListener('click', (e) => {
+    const botao = (e.target as HTMLElement).closest<HTMLElement>('[data-ir]');
+    if (botao) {
+      grade.hidden = true;
+      irPara(Number(botao.dataset.ir));
+    } else if (e.target === grade) grade.hidden = true;
+  });
+  [ajuda, fim].forEach((s) => s.addEventListener('click', (e) => e.target === s && (s.hidden = true)));
+
+  $('palco').addEventListener('click', (e) => {
+    const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    avancar(e.clientX < r.left + r.width / 2 ? -1 : 1);
+  });
+
+  let ultimaRoda = 0;
+  $('palco').addEventListener(
+    'wheel',
+    (e) => {
+      if (Math.abs(e.deltaY) < 20) return;
+      e.preventDefault();
+      const agora = Date.now();
+      if (agora - ultimaRoda < 450) return;
+      ultimaRoda = agora;
+      avancar(e.deltaY > 0 ? 1 : -1);
+    },
+    { passive: false },
+  );
+
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (!document.getElementById('visualizador')?.hidden) return;
+    const tecla = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    const acoes: Record<string, () => void> = {
+      ArrowRight: () => avancar(1),
+      PageDown: () => avancar(1),
+      d: () => avancar(1),
+      ' ': () => avancar(e.shiftKey ? -1 : 1),
+      ArrowLeft: () => avancar(-1),
+      PageUp: () => avancar(-1),
+      a: () => avancar(-1),
+      Home: () => irPara(0),
+      End: () => irPara(paginas.length - 1),
+      '1': () => definirModo('unica'),
+      '2': () => definirModo('dupla'),
+      c: () => bCapa.click(),
+      s: () => bVersao?.click(),
+      n: alternarNotas,
+      g: () => alternar(grade),
+      f: alternarTelaCheia,
+      '?': () => alternar(ajuda),
+      h: () => alternar(ajuda),
+      Escape: () => {
+        if (fecharSobreposicoes()) return;
+        if (!notas.hidden) return alternarNotas();
+        location.href = ($('leitor').querySelector('.leitor-barra a') as HTMLAnchorElement).href;
+      },
+    };
+    const acao = acoes[tecla];
+    if (!acao) return;
+    if (tecla !== 'Escape' && !grade.hidden && !['g', 'Escape'].includes(tecla)) return;
+    e.preventDefault();
+    if (!fim.hidden && tecla !== 'Escape') fim.hidden = true;
+    acao();
+  });
+
+  // Barras somem quando o mouse fica parado.
+  let temporizador: ReturnType<typeof setTimeout>;
+  const acordar = () => {
+    leitor.classList.remove('ocioso');
+    clearTimeout(temporizador);
+    temporizador = setTimeout(() => {
+      const aberto = sobreposicoes.some((s) => !s.hidden);
+      if (!aberto && !document.querySelector('.leitor-barra:hover, .leitor-rodape:hover')) leitor.classList.add('ocioso');
+    }, 2500);
+  };
+  addEventListener('mousemove', acordar);
+  acordar();
+</script>

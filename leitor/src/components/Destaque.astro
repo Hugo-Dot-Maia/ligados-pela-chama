@@ -1,0 +1,30 @@
+---
+import type { Arte } from '../lib/conteudo';
+import { otimizar } from '../lib/markdown';
+import Selo from './Selo.astro';
+
+interface Props {
+  arte: Arte;
+  linkDescricao?: boolean;
+}
+
+const { arte, linkDescricao = true } = Astro.props;
+const imagem = await otimizar(arte.img, undefined, 90);
+---
+
+<figure class="destaque" data-galeria>
+  <img
+    src={imagem.src}
+    width={imagem.width}
+    height={imagem.height}
+    alt={arte.titulo}
+    data-zoom={imagem.src}
+    data-legenda={arte.titulo}
+  />
+  <figcaption>
+    <Selo status={arte.status} texto={arte.statusTexto} />
+    {arte.statusTexto && <span>{arte.statusTexto}</span>}
+    {linkDescricao && arte.url !== '#' && <a href={arte.url}>Descrição da arte →</a>}
+    <span class="dica">Clique para ampliar</span>
+  </figcaption>
+</figure>

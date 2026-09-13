@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cartao from '../../components/Cartao.astro';
+import { catalogo } from '../../lib/conteudo';
+
+const { lugares } = catalogo();
+---
+
+<Base titulo="Lugares" secao="lugares">
+  <header class="cabecalho-pagina">
+    <h1>Lugares</h1>
+    <p>Cenários com concept art e ficha espacial. O selo indica o status da arte vigente.</p>
+  </header>
+
+  <div class="grade">
+    {
+      lugares.map((l) => (
+        <Cartao
+          href={l.url}
+          titulo={l.nome}
+          img={l.capa?.img}
+          status={l.status}
+          statusTexto={l.statusTexto}
+          detalhe={l.grupos.length > 1 ? `${l.grupos.length} artes` : l.capa ? undefined : 'Ainda sem concept art'}
+        />
+      ))
+    }
+  </div>
+</Base>

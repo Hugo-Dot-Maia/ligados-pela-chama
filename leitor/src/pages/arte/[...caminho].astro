@@ -1,0 +1,108 @@
+---
+import Base from '../../layouts/Base.astro';
+import Destaque from '../../components/Destaque.astro';
+import Versoes from '../../components/Versoes.astro';
+import { catalogo, lerMd, tituloDoMd, urlDoc, urlPara } from '../../lib/conteudo';
+import { renderizarMd } from '../../lib/markdown';
+
+export function getStaticPaths() {
+  return [...catalogo().artes.values()]
+    .filter((a) => a.rel.startsWith('imagens/'))
+    .map((a) => ({ params: { caminho: a.id } }));
+}
+
+const c = catalogo();
+const arte = c.artes.get(`${Astro.params.caminho}.png`)!;
+const grupo = c.grupos.find((g) => g.versoes.includes(arte))!;
+
+const dono = c.personagens.find((p) => [...p.grupos, ...p.subgalerias.flatMap((s) => s.grupos)].includes(grupo));
+const lugar = dono ? undefined : c.lugares.find((l) => l.grupos.includes(grupo));
+const secaoMundo = dono || lugar ? undefined : c.mundo.find((s) => s.grupos.includes(grupo));
+const leitura = c.leituras.find((l) => l.paginas.some((p) => p.final === arte));
+
+const trilha = dono
+  ? [{ href: '/personagens/', texto: 'Personagens' }, { href: dono.url, texto: dono.nome }]
+  : lugar
+    ? [{ href: '/lugares/', texto: 'Lugares' }, { href: lugar.url, texto: lugar.nome }]
+    : leitura
+      ? [{ href: '/capitulos/', texto: 'Capítulos' }, { href: leitura.url, texto: leitura.titulo }]
+      : [{ href: '/mundo/', texto: 'Mundo' }, ...(secaoMundo ? [{ href: '/mundo/', texto: secaoMundo.rotulo }] : [])];
+
+const descricao = arte.md
+  ? await renderizarMd(arte.md, { omitirTitulo: true, omitirStatus: true, omitirImagens: [arte.rel] })
+  : '';
+
+const referencias = [...(c.referenciadoPor.get(arte.rel) ?? []), ...(arte.md ? (c.referenciadoPor.get(arte.md) ?? []) : [])]
+  .filter((d, i, lista) => lista.indexOf(d) === i && !d.startsWith('imagens/'))
+  .map((d) => ({ href: urlPara(d) ?? urlDoc(d), titulo: tituloDoMd(lerMd(d)) ?? d }));
+---
+
+<Base titulo={arte.titulo} secao={dono ? 'personagens' : lugar ? 'lugares' : leitura ? 'capitulos' : 'mundo'}>
+  <div class="trilha">
+    {
+      trilha.map((t, i) => (
+        <>
+          {i > 0 && ' · '}
+          <a href={t.href}>{t.texto}</a>
+        </>
+      ))
+    }
+  </div>
+  <header class="cabecalho-pagina">
+    <h1>{arte.titulo}</h1>
+  </header>
+
+  <Destaque arte={arte} linkDescricao={false} />
+  {
+    grupo.versoes.length > 1 && (
+      <>
+        <h3>Todas as versões</h3>
+        <Versoes grupo={grupo} atual={arte} />
+      </>
+    )
+  }
+
+  <div class="duas-colunas secao">
+    <article class="md" set:html={descricao || '<p>Esta imagem não possui Markdown de descrição.</p>'} />
+    <aside class="lateral">
+      {
+        arte !== grupo.atual && (
+          <div class="painel">
+            <h3>Versão vigente</h3>
+            <p>
+              A referência atual é a <a href={grupo.atual.url}>versão {grupo.atual.versao}</a>.
+            </p>
+          </div>
+        )
+      }
+      {
+        leitura && (
+          <div class="painel">
+            <h3>Leitura</h3>
+            <p>
+              <a href={leitura.urlLer}>Abrir no leitor →</a>
+            </p>
+          </div>
+        )
+      }
+      {
+        referencias.length > 0 && (
+          <div class="painel">
+            <h3>Citada em</h3>
+            <ul>
+              {referencias.map((r) => (
+                <li>
+                  <a href={r.href}>{r.titulo}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+      <div class="painel">
+        <h3>Arquivo</h3>
+        <p style="word-break: break-all; font-size: .8rem"><code>{arte.rel}</code></p>
+      </div>
+    </aside>
+  </div>
+</Base>

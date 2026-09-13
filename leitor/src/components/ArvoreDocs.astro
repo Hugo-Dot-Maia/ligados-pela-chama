@@ -1,0 +1,76 @@
+---
+import { catalogo, humanizar, lerMd, tituloDoMd, urlDoc } from '../lib/conteudo';
+
+interface Props {
+  atual?: string;
+  modo?: 'lateral' | 'indice';
+}
+
+const { atual, modo = 'lateral' } = Astro.props;
+
+const ROTULOS: Record<string, string> = {
+  '.': 'Projeto',
+  docs: 'Documentos gerais',
+  'docs/cenarios': 'Cenários',
+  'docs/cenas': 'Cenas',
+  'docs/criaturas': 'Criaturas',
+  'docs/personagens/guilda-vigilia-do-corvo': 'Personagens · Guilda',
+  'docs/personagens/grandes-generais/luz': 'Personagens · Generais da Luz',
+  'docs/personagens/grandes-generais/trevas': 'Personagens · Generais das Trevas',
+  'docs/personagens/companheiros-de-jornada': 'Personagens · Companheiros',
+};
+
+const rotulo = (dir: string) => {
+  if (ROTULOS[dir]) return ROTULOS[dir];
+  const m = dir.match(/^capitulos\/([^/]+)(?:\/(.+))?$/);
+  if (m) return `Capítulo ${m[1]}${m[2] ? ` · ${humanizar(m[2])}` : ''}`;
+  return dir.split('/').map(humanizar).join(' · ');
+};
+
+const peso = (dir: string) =>
+  dir === '.' ? 0 : dir === 'docs' ? 1 : dir.startsWith('docs/personagens') ? 3 : dir.startsWith('docs/') ? 2 : dir.startsWith('capitulos/') ? 4 : 5;
+
+const grupos = new Map<string, { href: string; titulo: string; rel: string }[]>();
+for (const rel of catalogo().docs.filter((d) => !d.startsWith('imagens/'))) {
+  const dir = rel.includes('/') ? rel.slice(0, rel.lastIndexOf('/')) : '.';
+  if (!grupos.has(dir)) grupos.set(dir, []);
+  grupos.get(dir)!.push({ rel, href: urlDoc(rel), titulo: tituloDoMd(lerMd(rel)) ?? rel });
+}
+const ordenados = [...grupos.entries()].sort((a, b) => peso(a[0]) - peso(b[0]) || a[0].localeCompare(b[0]));
+---
+
+{
+  modo === 'lateral' ? (
+    <nav class="arvore">
+      {ordenados.map(([dir, docs]) => (
+        <details open={docs.some((d) => d.rel === atual) || dir === 'docs' || dir === '.'}>
+          <summary>{rotulo(dir)}</summary>
+          <ul>
+            {docs.map((d) => (
+              <li>
+                <a href={d.href} class:list={{ ativo: d.rel === atual }}>
+                  {d.titulo}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ))}
+    </nav>
+  ) : (
+    <div class="indice-docs">
+      {ordenados.map(([dir, docs]) => (
+        <div class="painel">
+          <h3>{rotulo(dir)}</h3>
+          <ul>
+            {docs.map((d) => (
+              <li>
+                <a href={d.href}>{d.titulo}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )
+}

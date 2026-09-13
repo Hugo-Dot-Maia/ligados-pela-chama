@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cartao from '../../components/Cartao.astro';
+import { catalogo } from '../../lib/conteudo';
+
+const { secoesPersonagens } = catalogo();
+---
+
+<Base titulo="Personagens" secao="personagens">
+  <header class="cabecalho-pagina">
+    <h1>Personagens</h1>
+    <p>Organizados por núcleo narrativo, na ordem do índice de personagens. O selo indica o status da concept art vigente.</p>
+  </header>
+
+  {
+    secoesPersonagens.map((s) => (
+      <section class="secao">
+        <div class="secao-cabecalho">
+          <h2>{s.rotulo}</h2>
+          <span class="contagem">{s.personagens.filter((p) => !p.historico).length} fichas</span>
+        </div>
+        <div class="grade">
+          {s.personagens.map((p) => (
+            <Cartao
+              href={p.url}
+              titulo={p.nome}
+              subtitulo={p.epiteto}
+              detalhe={p.papel}
+              img={p.capa?.img}
+              status={p.capa?.status}
+              statusTexto={p.capa?.statusTexto}
+              historico={p.historico}
+            />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</Base>

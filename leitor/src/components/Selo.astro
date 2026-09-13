@@ -1,0 +1,14 @@
+---
+import { rotuloStatus, type Status } from '../lib/conteudo';
+
+interface Props {
+  status: Status;
+  texto?: string;
+  contexto?: 'arte' | 'pagina';
+}
+
+const { status, texto, contexto = 'arte' } = Astro.props;
+const rotulo = rotuloStatus(status, contexto);
+---
+
+{rotulo && <span class={`selo selo-${status}`} title={texto}>{rotulo}</span>}

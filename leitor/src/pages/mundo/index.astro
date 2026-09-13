@@ -1,0 +1,48 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cartao from '../../components/Cartao.astro';
+import { catalogo, lerMd, tituloDoMd, urlPara, urlDoc } from '../../lib/conteudo';
+
+const { mundo } = catalogo();
+const secoes = mundo.map((s) => ({
+  ...s,
+  links: s.docs.map((d) => ({ href: urlPara(d) ?? urlDoc(d), titulo: tituloDoMd(lerMd(d)) ?? d })),
+}));
+---
+
+<Base titulo="Mundo" secao="mundo">
+  <header class="cabecalho-pagina">
+    <h1>Mundo</h1>
+    <p>Mapas, divindades, Grandes Generais em conjunto, criaturas e o sistema de Ânima.</p>
+  </header>
+
+  {
+    secoes.map((s) => (
+      <section class="secao">
+        <div class="secao-cabecalho">
+          <h2>{s.rotulo}</h2>
+          <div class="chips">
+            {s.links.map((d) => (
+              <a class="chip" href={d.href}>
+                {d.titulo}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="grade">
+          {s.grupos.map((g) => (
+            <Cartao
+              href={g.atual.url}
+              titulo={g.titulo}
+              img={g.atual.img}
+              status={g.atual.status}
+              statusTexto={g.atual.statusTexto}
+              historico={g.atual.status === 'historica'}
+              detalhe={g.versoes.length > 1 ? `${g.versoes.length} versões` : undefined}
+            />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</Base>

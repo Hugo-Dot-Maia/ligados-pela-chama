@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import Selo from '../../components/Selo.astro';
+import { catalogo } from '../../lib/conteudo';
+import { otimizar } from '../../lib/markdown';
+
+const { leituras } = catalogo();
+const itens = await Promise.all(
+  leituras.map(async (l) => ({
+    l,
+    capa: await otimizar(l.paginas[0].final.img, 320, 80),
+    aprovadas: l.paginas.filter((p) => p.status === 'canonica').length,
+  })),
+);
+---
+
+<Base titulo="Capítulos" secao="capitulos">
+  <header class="cabecalho-pagina">
+    <h1>Capítulos e cenas</h1>
+    <p>Capítulos numerados e cenas avulsas, na ordem em que aparecem no projeto.</p>
+  </header>
+
+  {
+    itens.map(({ l, capa, aprovadas }) => (
+      <article class="leitura-linha">
+        <a href={l.urlLer}>
+          <img src={capa.src} width={capa.width} height={capa.height} alt="" loading="lazy" />
+        </a>
+        <div>
+          <span class="rotulo-tipo">{l.tipo === 'cena' ? 'Cena avulsa' : 'Capítulo'}</span>
+          <h2>
+            <a href={l.url} style="color: inherit">
+              {l.titulo}
+            </a>
+          </h2>
+          <div class="meta">
+            <Selo status={l.status} texto={l.statusTexto} />
+            <span>{l.paginas.length} páginas</span>
+            <span>
+              {aprovadas} de {l.paginas.length} aprovadas
+            </span>
+            <span class="barra-progresso">
+              <span style={`width: ${(aprovadas / l.paginas.length) * 100}%`} />
+            </span>
+          </div>
+          {l.statusTexto && <p style="color: var(--texto-suave); margin: .6rem 0 0; max-width: 80ch">{l.statusTexto}</p>}
+          <div class="acoes">
+            <a class="botao" href={l.urlLer}>
+              Ler
+            </a>
+            <a class="botao botao-secundario" data-continuar={l.id} href={l.urlLer} hidden>
+              Continuar
+            </a>
+            <a class="botao botao-secundario" href={l.url}>
+              Visão geral
+            </a>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</Base>

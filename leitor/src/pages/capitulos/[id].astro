@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import Selo from '../../components/Selo.astro';
+import { catalogo, lerMd, tituloDoMd, urlDoc } from '../../lib/conteudo';
+import { otimizar, renderizarMd } from '../../lib/markdown';
+
+export function getStaticPaths() {
+  return catalogo().leituras.map((l) => ({ params: { id: l.id } }));
+}
+
+const c = catalogo();
+const l = c.leituras.find((x) => x.id === Astro.params.id)!;
+const minis = await Promise.all(l.paginas.map((p) => otimizar(p.final.img, 360, 78)));
+const resumo = l.resumo ? await renderizarMd(l.resumo, { omitirTitulo: true, semImagens: true }) : '';
+const aprovadas = l.paginas.filter((p) => p.status === 'canonica').length;
+const documentos = (
+  l.tipo === 'capitulo'
+    ? c.docs.filter((d) => d.startsWith(`capitulos/${l.id}/`) && !d.includes('/paginas/'))
+    : l.resumo
+      ? [l.resumo]
+      : []
+).map((d) => ({ href: urlDoc(d), titulo: tituloDoMd(lerMd(d)) ?? d }));
+const roteiros = l.paginas.filter((p) => p.md && l.tipo === 'capitulo');
+---
+
+<Base titulo={l.titulo} secao="capitulos">
+  <div class="trilha"><a href="/capitulos/">Capítulos</a> · {l.tipo === 'cena' ? 'Cena avulsa' : 'Capítulo'}</div>
+  <header class="cabecalho-pagina">
+    <h1>{l.titulo}</h1>
+    {l.statusTexto && <p>{l.statusTexto}</p>}
+    <div class="meta" style="margin-top: .8rem">
+      <Selo status={l.status} texto={l.statusTexto} />
+      <span>{l.paginas.length} páginas</span>
+      <span>{aprovadas} de {l.paginas.length} aprovadas</span>
+      <span class="barra-progresso"><span style={`width: ${(aprovadas / l.paginas.length) * 100}%`}></span></span>
+    </div>
+    <div class="acoes">
+      <a class="botao" href={l.urlLer}>Ler do início</a>
+      <a class="botao botao-secundario" data-continuar={l.id} href={l.urlLer} hidden>Continuar</a>
+    </div>
+  </header>
+
+  <section class="secao">
+    <div class="secao-cabecalho">
+      <h2>Páginas</h2>
+      <span class="contagem">Clique numa página para abrir o leitor nela</span>
+    </div>
+    <div class="grade grade-retrato">
+      {
+        l.paginas.map((p, i) => (
+          <a href={`${l.urlLer}#p=${p.numero}`} class="cartao cartao-retrato" title={p.statusTexto}>
+            <div class="cartao-imagem">
+              <img src={minis[i].src} width={minis[i].width} height={minis[i].height} alt="" loading="lazy" />
+              <Selo status={p.status} texto={p.statusTexto} contexto="pagina" />
+            </div>
+            <div class="cartao-texto">
+              <strong>Página {p.numero}</strong>
+              {p.titulo && <span class="cartao-sub">{p.titulo}</span>}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <div class="duas-colunas secao">
+    <article class="md" set:html={resumo} />
+    <aside class="lateral">
+      {
+        documentos.length > 0 && (
+          <div class="painel">
+            <h3>Documentos</h3>
+            <ul>
+              {documentos.map((d) => (
+                <li>
+                  <a href={d.href}>{d.titulo}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+      {
+        roteiros.length > 0 && (
+          <div class="painel">
+            <h3>Roteiro por página</h3>
+            <ul>
+              {roteiros.map((p) => (
+                <li>
+                  <a href={urlDoc(p.md!)}>
+                    Página {p.numero}
+                    {p.titulo && ` — ${p.titulo}`}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </aside>
+  </div>
+</Base>

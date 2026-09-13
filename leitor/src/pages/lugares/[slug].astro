@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cartao from '../../components/Cartao.astro';
+import Destaque from '../../components/Destaque.astro';
+import Versoes from '../../components/Versoes.astro';
+import { catalogo, urlDoc } from '../../lib/conteudo';
+import { renderizarMd } from '../../lib/markdown';
+
+export function getStaticPaths() {
+  return catalogo().lugares.map((l) => ({ params: { slug: l.slug } }));
+}
+
+const c = catalogo();
+const l = c.lugares.find((x) => x.slug === Astro.params.slug)!;
+const omitir = l.capa ? [l.capa.rel] : [];
+const texto = l.doc
+  ? await renderizarMd(l.doc, { omitirTitulo: true, omitirImagens: omitir })
+  : l.capa?.md
+    ? await renderizarMd(l.capa.md, { omitirTitulo: true, omitirImagens: omitir })
+    : '';
+const grupoCapa = l.grupos[0];
+const outros = l.grupos.slice(1);
+---
+
+<Base titulo={l.nome} secao="lugares">
+  <div class="trilha"><a href="/lugares/">Lugares</a></div>
+  <header class="cabecalho-pagina">
+    <h1>{l.nome}</h1>
+  </header>
+
+  {l.capa && <Destaque arte={l.capa} />}
+  {
+    grupoCapa && grupoCapa.versoes.length > 1 && (
+      <>
+        <h3>Versões</h3>
+        <Versoes grupo={grupoCapa} atual={l.capa} ocultarHistoricas />
+      </>
+    )
+  }
+
+  {
+    outros.length > 0 && (
+      <section class="secao" style="margin-top: 1.5rem">
+        <div class="secao-cabecalho">
+          <h2>Outras artes</h2>
+        </div>
+        <div class="grade">
+          {outros.map((g) => (
+            <Cartao href={g.atual.url} titulo={g.titulo} img={g.atual.img} status={g.atual.status} statusTexto={g.atual.statusTexto} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <div class="duas-colunas secao">
+    <article class="md" set:html={texto || '<p>Sem ficha espacial para este lugar.</p>'} />
+    <aside class="lateral">
+      <div class="painel">
+        <h3>Arquivos</h3>
+        <ul>
+          {l.doc && <li><a href={urlDoc(l.doc)}>Ficha como documento</a></li>}
+          {l.capa && <li><a href={l.capa.url}>Página da arte</a></li>}
+        </ul>
+      </div>
+    </aside>
+  </div>
+</Base>

@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cartao from '../../components/Cartao.astro';
+import Destaque from '../../components/Destaque.astro';
+import Versoes from '../../components/Versoes.astro';
+import { catalogo, urlDoc } from '../../lib/conteudo';
+import { renderizarMd } from '../../lib/markdown';
+
+export function getStaticPaths() {
+  return catalogo().personagens.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const c = catalogo();
+const p = c.personagens.find((x) => x.slug === Astro.params.slug)!;
+const secao = c.secoesPersonagens.find((s) => s.id === p.secao);
+const ficha = p.ficha
+  ? await renderizarMd(p.ficha, { omitirTitulo: true, omitirImagens: p.capa ? [p.capa.rel] : [] })
+  : p.capa?.md
+    ? await renderizarMd(p.capa.md, { omitirTitulo: true, omitirImagens: [p.capa.rel] })
+    : '';
+const grupoCapa = p.grupos.find((g) => g.atual === p.capa);
+const outrosGrupos = p.grupos.filter((g) => g !== grupoCapa);
+const vizinhos = secao?.personagens.filter((x) => !x.historico || x === p) ?? [];
+const pos = vizinhos.indexOf(p);
+const anterior = vizinhos[pos - 1];
+const proximo = vizinhos[pos + 1];
+---
+
+<Base titulo={p.nome} secao="personagens">
+  <div class="trilha"><a href="/personagens/">Personagens</a> · {secao?.rotulo}</div>
+  <header class="cabecalho-pagina">
+    <h1>{p.nome}</h1>
+    {p.epiteto && <p class="epiteto">{p.epiteto}</p>}
+    {p.papel && <p>{p.papel}</p>}
+  </header>
+
+  {p.capa && <Destaque arte={p.capa} />}
+  {
+    grupoCapa && grupoCapa.versoes.length > 1 && (
+      <>
+        <h3>Versões</h3>
+        <Versoes grupo={grupoCapa} atual={p.capa} ocultarHistoricas />
+      </>
+    )
+  }
+
+  {
+    [...outrosGrupos.length ? [{ nome: 'Outras artes', grupos: outrosGrupos }] : [], ...p.subgalerias].map((sub) => (
+      <section class="secao" style="margin-top: 1.5rem">
+        <div class="secao-cabecalho">
+          <h2>{sub.nome}</h2>
+        </div>
+        <div class="grade">
+          {sub.grupos.map((g) => (
+            <Cartao
+              href={g.atual.url}
+              titulo={g.titulo}
+              img={g.atual.img}
+              status={g.atual.status}
+              statusTexto={g.atual.statusTexto}
+              historico={g.atual.status === 'historica'}
+              detalhe={g.versoes.length > 1 ? `${g.versoes.length} versões` : undefined}
+            />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <div class="duas-colunas secao">
+    <article class="md" set:html={ficha || '<p>Ficha ainda não escrita.</p>'} />
+    <aside class="lateral">
+      {
+        p.statusTexto && (
+          <div class="painel">
+            <h3>Status da ficha</h3>
+            <p>{p.statusTexto}</p>
+          </div>
+        )
+      }
+      {
+        !p.capa && (
+          <div class="painel">
+            <h3>Sem concept art</h3>
+            <p>Este personagem ainda não possui arte no projeto.</p>
+          </div>
+        )
+      }
+      <div class="painel">
+        <h3>Arquivos</h3>
+        <ul>
+          {p.ficha && <li><a href={urlDoc(p.ficha)}>Ficha como documento</a></li>}
+          {p.capa && <li><a href={p.capa.url}>Descrição da arte vigente</a></li>}
+        </ul>
+      </div>
+      <div class="vizinhos">
+        {anterior ? <a class="chip" href={anterior.url}>← {anterior.nome}</a> : <span />}
+        {proximo && <a class="chip" href={proximo.url}>{proximo.nome} →</a>}
+      </div>
+    </aside>
+  </div>
+</Base>

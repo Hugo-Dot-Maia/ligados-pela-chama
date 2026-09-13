@@ -1,0 +1,95 @@
+---
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/cormorant-garamond/700.css';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import Visualizador from '../components/Visualizador.astro';
+
+interface Props {
+  titulo?: string;
+  secao?: string;
+  leitor?: boolean;
+}
+
+const { titulo, secao, leitor = false } = Astro.props;
+
+const navegacao = [
+  { href: '/', rotulo: 'Início', id: 'inicio' },
+  { href: '/capitulos/', rotulo: 'Capítulos', id: 'capitulos' },
+  { href: '/personagens/', rotulo: 'Personagens', id: 'personagens' },
+  { href: '/lugares/', rotulo: 'Lugares', id: 'lugares' },
+  { href: '/mundo/', rotulo: 'Mundo', id: 'mundo' },
+  { href: '/docs/', rotulo: 'Documentos', id: 'docs' },
+];
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titulo ? `${titulo} · Ligados pela Chama` : 'Ligados pela Chama'}</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>"
+    />
+    <script is:inline>
+      try {
+        if (localStorage.getItem('mostrarHistorico') === '1') document.documentElement.classList.add('mostrar-historico');
+      } catch {}
+    </script>
+  </head>
+  <body class:list={{ 'pagina-leitor': leitor }}>
+    {
+      leitor ? (
+        <slot />
+      ) : (
+        <>
+          <header class="topo">
+            <a class="marca" href="/">
+              Ligados <span>pela</span> Chama
+            </a>
+            <nav>
+              {navegacao.map((item) => (
+                <a href={item.href} class:list={{ ativo: item.id === secao }}>
+                  {item.rotulo}
+                </a>
+              ))}
+            </nav>
+            <label class="alternar-historico" title="Mostrar também versões e conceitos substituídos">
+              <input type="checkbox" id="alternar-historico" />
+              Versões históricas
+            </label>
+          </header>
+          <main class="conteudo">
+            <slot />
+          </main>
+        </>
+      )
+    }
+    <Visualizador />
+    <script>
+      const caixa = document.getElementById('alternar-historico') as HTMLInputElement | null;
+      if (caixa) {
+        caixa.checked = document.documentElement.classList.contains('mostrar-historico');
+        caixa.addEventListener('change', () => {
+          document.documentElement.classList.toggle('mostrar-historico', caixa.checked);
+          try {
+            localStorage.setItem('mostrarHistorico', caixa.checked ? '1' : '0');
+          } catch {}
+        });
+      }
+
+      document.querySelectorAll<HTMLAnchorElement>('[data-continuar]').forEach((el) => {
+        try {
+          const n = localStorage.getItem(`leitor:${el.dataset.continuar}`);
+          if (n && Number(n) > 1) {
+            el.href = `${el.getAttribute('href')!.split('#')[0]}#p=${n}`;
+            el.textContent = `Continuar da página ${n}`;
+            el.hidden = false;
+          }
+        } catch {}
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import ArvoreDocs from '../../components/ArvoreDocs.astro';
+import { catalogo, lerMd, relDoCaminhoDoc, tituloDoMd, urlDoc, urlPara } from '../../lib/conteudo';
+import { renderizarMd } from '../../lib/markdown';
+
+export function getStaticPaths() {
+  return catalogo()
+    .docs.filter((d) => !d.startsWith('imagens/'))
+    .map((d) => ({ params: { caminho: urlDoc(d).slice('/docs/'.length, -1) } }));
+}
+
+const rel = relDoCaminhoDoc(Astro.params.caminho!);
+const titulo = tituloDoMd(lerMd(rel)) ?? rel;
+const html = await renderizarMd(rel);
+const visaoRica = urlPara(rel);
+const temVisaoRica = visaoRica && !visaoRica.startsWith('/docs/');
+---
+
+<Base titulo={titulo} secao="docs">
+  <div class="docs-layout">
+    <ArvoreDocs atual={rel} />
+    <div>
+      <div class="trilha">
+        <a href="/docs/">Documentos</a> · <code>{rel}</code>
+        {temVisaoRica && <> · <a href={visaoRica}>Ver na página ilustrada →</a></>}
+      </div>
+      <article class="md" set:html={html} />
+    </div>
+  </div>
+</Base>

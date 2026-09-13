@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import ArvoreDocs from '../../components/ArvoreDocs.astro';
+---
+
+<Base titulo="Documentos" secao="docs">
+  <header class="cabecalho-pagina">
+    <h1>Documentos</h1>
+    <p>Todos os Markdowns do projeto, exceto as descrições das imagens, que ficam nas páginas de cada arte.</p>
+    <div class="acoes">
+      <a class="botao" href="/docs/estado-atual/">Estado atual do projeto</a>
+      <a class="botao botao-secundario" href="/docs/continuidade/">Continuidade</a>
+    </div>
+  </header>
+  <ArvoreDocs modo="indice" />
+</Base>

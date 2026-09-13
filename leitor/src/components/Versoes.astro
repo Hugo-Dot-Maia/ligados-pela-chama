@@ -1,0 +1,32 @@
+---
+import type { Arte, GrupoArte } from '../lib/conteudo';
+import { otimizar } from '../lib/markdown';
+import Selo from './Selo.astro';
+
+interface Props {
+  grupo: GrupoArte;
+  atual?: Arte;
+  ocultarHistoricas?: boolean;
+}
+
+const { grupo, atual, ocultarHistoricas = false } = Astro.props;
+const itens = await Promise.all(grupo.versoes.map(async (v) => ({ v, mini: await otimizar(v.img, 320, 75) })));
+---
+
+<div class="versoes">
+  {
+    itens.map(({ v, mini }) => (
+      <a
+        href={v.url}
+        class:list={['versao', { atual: v === atual, 'item-historico': ocultarHistoricas && v.status === 'historica' }]}
+        title={v.statusTexto}
+      >
+        <img src={mini.src} width={mini.width} height={mini.height} alt="" loading="lazy" />
+        <span>
+          v{v.versao || 1}
+          <Selo status={v.status} texto={v.statusTexto} />
+        </span>
+      </a>
+    ))
+  }
+</div>

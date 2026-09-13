@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import Cartao from '../components/Cartao.astro';
+import { catalogo, existe, lerMd } from '../lib/conteudo';
+import { otimizar } from '../lib/markdown';
+
+const c = catalogo();
+const principal = c.leituras.find((l) => l.tipo === 'capitulo') ?? c.leituras[0];
+const capa = principal ? await otimizar(principal.paginas[0].final.img, 800, 85) : undefined;
+const aprovadas = principal?.paginas.filter((p) => p.status === 'canonica').length ?? 0;
+
+const readme = existe('README.md') ? lerMd('README.md') : '';
+const direcao = readme.match(/##\s+Direção atual\s*\n+([^\n]+)/)?.[1];
+
+const mira = c.personagens.find((p) => p.slug === 'mira') ?? c.personagens.find((p) => p.capa);
+const lugar = c.lugares.find((l) => l.slug === 'vigilia-do-corvo' && l.capa) ?? c.lugares.find((l) => l.capa);
+const mapa = c.mundo.flatMap((s) => s.grupos.map((g) => g.atual)).find((a) => a.rel.includes('/mapa/') && a.status === 'canonica');
+const vigentes = c.personagens.filter((p) => !p.historico).length;
+const totalArtesMundo = c.mundo.reduce((n, s) => n + s.grupos.length, 0);
+---
+
+<Base secao="inicio">
+  {
+    principal && capa && (
+      <section class="hero">
+        <a href={principal.urlLer} class="hero-capa" title={`Ler ${principal.titulo}`}>
+          <img src={capa.src} width={capa.width} height={capa.height} alt={`Primeira página de ${principal.titulo}`} />
+        </a>
+        <div>
+          <span class="rotulo">Compêndio do mangá</span>
+          <h1>Ligados pela Chama</h1>
+          {direcao && <p>{direcao}</p>}
+          <div class="meta">
+            <span>{principal.titulo}</span>
+            <span>{principal.paginas.length} páginas</span>
+            <span>{aprovadas} aprovadas</span>
+          </div>
+          <div class="acoes">
+            <a class="botao" href={principal.urlLer}>
+              Ler {principal.titulo}
+            </a>
+            <a class="botao botao-secundario" data-continuar={principal.id} href={principal.urlLer} hidden>
+              Continuar
+            </a>
+            <a class="botao botao-secundario" href={principal.url}>
+              Visão geral
+            </a>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="secao">
+    <div class="secao-cabecalho"><h2>Explorar</h2></div>
+    <div class="grade">
+      <Cartao
+        href="/capitulos/"
+        titulo="Capítulos e cenas"
+        subtitulo={`${c.leituras.length} ${c.leituras.length === 1 ? 'leitura' : 'leituras'}`}
+        detalhe="Leitor em página dupla, storyboards e roteiro de cada página."
+        img={c.leituras.at(-1)?.paginas[0]?.final.img}
+      />
+      <Cartao
+        href="/personagens/"
+        titulo="Personagens"
+        subtitulo={`${vigentes} fichas`}
+        detalhe="Guilda, Grandes Generais da Luz e das Trevas e companheiros."
+        img={mira?.capa?.img}
+      />
+      <Cartao
+        href="/lugares/"
+        titulo="Lugares"
+        subtitulo={`${c.lugares.length} cenários`}
+        detalhe="Concept arts e fichas espaciais dos cenários."
+        img={lugar?.capa?.img}
+      />
+      <Cartao
+        href="/mundo/"
+        titulo="Mundo"
+        subtitulo={`${totalArtesMundo} artes`}
+        detalhe="Mapa de Arkenor, divindades, Umbrais e sistema de Ânima."
+        img={mapa?.img}
+      />
+      <Cartao
+        href="/docs/"
+        titulo="Documentos"
+        subtitulo={`${c.docs.filter((d) => !d.startsWith('imagens/')).length} arquivos`}
+        detalhe="Estado atual, continuidade, roteiro, sistemas e guias."
+      />
+    </div>
+  </section>
+</Base>
