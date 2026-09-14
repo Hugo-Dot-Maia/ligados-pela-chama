@@ -192,6 +192,8 @@ export interface SecaoMundo {
   id: string;
   rotulo: string;
   grupos: GrupoArte[];
+  /** Grupos separados pela primeira subpasta da seção (ex.: mapa/valedorn). */
+  subgrupos: { id: string; rotulo: string; grupos: GrupoArte[] }[];
   docs: string[];
 }
 
@@ -538,13 +540,49 @@ function montarMundo(grupos: GrupoArte[]): SecaoMundo[] {
     .filter((id) => porSecao.has(id))
     .map((id) => {
       const def = SECOES_MUNDO.find((s) => s.id === id);
+      const grupos = porSecao.get(id)!;
       return {
         id,
         rotulo: def?.rotulo ?? humanizar(id),
-        grupos: porSecao.get(id)!,
+        grupos,
+        subgrupos: separarPorSubpasta(id, grupos),
         docs: (def?.docs ?? []).filter(existe),
       };
     });
+}
+
+const ROTULOS_SUBPASTAS: Record<string, string> = {
+  valedorn: 'Valedorn',
+  kharvann: 'Kharvann',
+  lumara: 'Lúmara',
+  orvena: 'Orvena',
+  namaris: 'Namaris',
+  nocthar: 'Ermo de Nocthar',
+  'continente-negro': 'Continente Negro',
+};
+
+function separarPorSubpasta(secao: string, grupos: GrupoArte[]): SecaoMundo['subgrupos'] {
+  const raiz = grupos[0].pasta.startsWith('imagens/concept-art/') ? `imagens/concept-art/${secao}` : `imagens/${secao}`;
+  const porSub = new Map<string, GrupoArte[]>();
+  for (const g of grupos) {
+    const sub = g.pasta === raiz ? '' : g.pasta.slice(raiz.length + 1).split('/')[0];
+    if (!porSub.has(sub)) porSub.set(sub, []);
+    porSub.get(sub)!.push(g);
+  }
+  // Pasta "regional" primeiro; o restante em ordem alfabética de título.
+  const ordenar = (lista: GrupoArte[]) =>
+    lista.sort(
+      (a, b) =>
+        Number(!a.pasta.endsWith('/regional')) - Number(!b.pasta.endsWith('/regional')) ||
+        a.titulo.localeCompare(b.titulo, 'pt-BR'),
+    );
+  return [...porSub.entries()]
+    .sort((a, b) => (a[0] === '' ? -1 : b[0] === '' ? 1 : a[0].localeCompare(b[0])))
+    .map(([sub, lista]) => ({
+      id: sub || 'geral',
+      rotulo: sub ? (ROTULOS_SUBPASTAS[sub] ?? humanizar(sub)) : secao === 'mapa' ? 'Península de Arkenor' : 'Geral',
+      grupos: ordenar(lista),
+    }));
 }
 
 function montarLeituras(arquivos: string[], artes: Map<string, Arte>, referenciadoPor: Map<string, string[]>): Leitura[] {

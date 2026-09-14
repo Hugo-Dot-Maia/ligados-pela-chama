@@ -29,19 +29,29 @@ const secoes = mundo.map((s) => ({
             ))}
           </div>
         </div>
-        <div class="grade">
-          {s.grupos.map((g) => (
-            <Cartao
-              href={g.atual.url}
-              titulo={g.titulo}
-              img={g.atual.img}
-              status={g.atual.status}
-              statusTexto={g.atual.statusTexto}
-              historico={g.atual.status === 'historica'}
-              detalhe={g.versoes.length > 1 ? `${g.versoes.length} versões` : undefined}
-            />
-          ))}
-        </div>
+        {(s.subgrupos.length > 1 ? s.subgrupos : [{ id: s.id, rotulo: '', grupos: s.grupos }]).map((sub) => (
+          <div
+            class:list={[
+              'subsecao',
+              { 'item-historico': sub.grupos.every((g) => g.atual.status === 'historica') },
+            ]}
+          >
+            {sub.rotulo && <h3 class="subsecao-titulo">{sub.rotulo}</h3>}
+            <div class="grade">
+              {sub.grupos.map((g) => (
+                <Cartao
+                  href={g.atual.url}
+                  titulo={g.titulo}
+                  img={g.atual.img}
+                  status={g.atual.status}
+                  statusTexto={g.atual.statusTexto}
+                  historico={g.atual.status === 'historica'}
+                  detalhe={g.versoes.length > 1 ? `${g.versoes.length} versões` : undefined}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
     ))
   }

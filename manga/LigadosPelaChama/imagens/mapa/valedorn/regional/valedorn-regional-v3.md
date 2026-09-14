@@ -2,7 +2,7 @@
 
 ![Mapa regional de Valedorn — versão 3](valedorn-regional-v3.png)
 
-> **Status:** proposta visual vigente. Corrige a relação entre Valedorn, Kharvann, Lago Partido, Lúmara e Orvena; cidades e nomes novos ainda aguardam aprovação.
+> **Status:** versão histórica. O ajuste final que simplificava o rio foi preterido pelo autor em favor da composição anterior, preservada como v4.
 
 ## Alterações em relação à v2
 
@@ -33,4 +33,3 @@
 ## Direção usada na edição
 
 Usar o mapa canônico da Península de Arkenor como autoridade. Colocar Valedorn a noroeste do Lago Partido, Kharvann a nordeste, Lúmara ao sul e sudoeste e Orvena ao sul e sudeste. Fazer o rio Valedorn–Kharvann desembocar no lago e mostrar a fronteira reta Lúmara–Orvena partindo de sua margem sul, preservando a Muralha, as fortalezas e os principais locais de Valedorn.
-

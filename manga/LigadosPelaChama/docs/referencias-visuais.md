@@ -39,6 +39,30 @@ Elementos estabelecidos: figura completamente branca, ausência total de rosto e
 - Antagonistas com formas mais rígidas e grande uso de espaço negativo.
 - Evitar reproduzir exatamente o estilo de qualquer artista ou franquia existente.
 
+## Aurivela — mapa urbano versão 1
+
+![Mapa urbano de Aurivela](../imagens/mapa/valedorn/aurivela/aurivela-mapa-urbano-v1.png)
+
+Referência visual canônica. Aurivela é uma cidade fortificada de pontes no encontro de dois rios, organizada por três círculos defensivos irregulares. A Cidade Baixa ocupa margens e ilhas vulneráveis; o Distrito dos Arsenais reúne academia, oficinas e quartéis; a Cidade da Coroa domina a elevação central; o Anel Interditado acompanha uma estrutura antiga. No subsolo, galerias radiais convergem para uma câmara circular que contém o Coração Cinzento esférico. Construções minúsculas sem rótulo podem variar e não criam novos locais canônicos.
+
+## Ponte-Régia — mapa urbano versão 1
+
+![Mapa urbano de Ponte-Régia](../imagens/mapa/valedorn/ponte-regia/ponte-regia-mapa-urbano-v1.png)
+
+Referência visual canônica. O rio separa a margem de Valedorn da margem de Kharvann. A Ponte das Duas Coroas, larga e fortificada, liga duas alfândegas independentes. Mercado da Fronteira e Bairro dos Armazéns sustentam o comércio público; sob os pilares, a Rota Clandestina conecta cais ocultos, porões e a Câmara Selada usada pelos dois governos. Brasões, pessoas, veículos, embarcações e pequenos edifícios sem rótulo podem variar e não estabelecem novos elementos canônicos.
+
+## Campodouro — mapa urbano versão 1
+
+![Mapa urbano de Campodouro](../imagens/mapa/valedorn/campodouro/campodouro-mapa-urbano-v1.png)
+
+Referência visual canônica. Campodouro ocupa uma área irrigada do Vale de Aurivela, cercada por campos, pomares e pastagens. A Praça da Colheita, os Celeiros da Coroa, a Casa do Dízimo, o Mercado dos Campos, os Moinhos do Vale e o Portão do Sul estruturam a cidade. A Estrada de Aurivela liga o centro agrícola à capital, enquanto a Estrada do Sul conduz os comboios tributários destinados à ocupação. Pessoas, animais, veículos, bandeiras e pequenas construções sem rótulo podem variar e não estabelecem novos elementos canônicos.
+
+## Pedra-Mansa — mapa urbano versão 1
+
+![Mapa urbano de Pedra-Mansa](../imagens/mapa/valedorn/pedra-mansa/pedra-mansa-mapa-urbano-v1.png)
+
+Referência visual canônica. O mapa apresenta o mesmo povoado em dois momentos com geografia equivalente. Sob o Nó Antigo, Pedra-Mansa é fértil, aquecida e marcada pelo repouso incomum de pessoas e animais. Após a instalação do Selo Artificial no mesmo encaixe, geada, vegetação adoecida, água congelada, vigília e cortejos tornam visíveis os pesadelos, o frio persistente e as mortes inexplicáveis. Pessoas, animais, carroças e pequenas construções sem identificação podem variar.
+
 ## Grandes Generais — referências canônicas adicionais
 
 ### Ordan, a Fornalha Infernal — versão 4

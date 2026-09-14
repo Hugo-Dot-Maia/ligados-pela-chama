@@ -30,6 +30,26 @@ Uma monarquia militar terrestre, protegida pela Muralha de Cinza e favorecida po
 
 **Coração Cinzento — estabelecido:** Aurivela foi erguida sobre o ponto de comando subterrâneo da Muralha de Cinza. Ali as forças antigas da Luz e das Trevas permanecem equilibradas, tornando a capital o único local capaz de sustentar o ritual de criação de um novo deus.
 
+O [mapa urbano de Aurivela v1](../imagens/mapa/valedorn/aurivela/aurivela-mapa-urbano-v1.md) é canônico. Estabelece uma cidade de pontes dividida entre Cidade Baixa, Distrito dos Arsenais, Cidade da Coroa e Anel Interditado, cercada por três círculos defensivos irregulares e construída sobre galerias antigas que convergem para o Coração Cinzento.
+
+### Ponte-Régia — estabelecida
+
+Ponte-Régia é uma cidade fortificada sobre o grande rio de fronteira com Kharvann. Oficialmente funciona como centro comercial e alfandegário. Secretamente, agentes das duas potências negociam pedra saturada de Ânima e tecnologia de selos artificiais, usando o movimento de caravanas e embarcações para ocultar cargas e encontros.
+
+O [mapa urbano de Ponte-Régia v1](../imagens/mapa/valedorn/ponte-regia/ponte-regia-mapa-urbano-v1.md) é canônico. Estabelece a Ponte das Duas Coroas, alfândegas fortificadas separadas, o Mercado da Fronteira, o Bairro dos Armazéns e uma rede clandestina sob o rio que converge para a Câmara Selada.
+
+### Campodouro — estabelecida
+
+Campodouro é a principal cidade agrícola do Vale de Aurivela. Seus celeiros imensos armazenam a produção regional, e os festivais da colheita celebram a fartura do vale. Essa prosperidade contrasta com os impostos cobrados para sustentar a ocupação do sul.
+
+O [mapa urbano de Campodouro v1](../imagens/mapa/valedorn/campodouro/campodouro-mapa-urbano-v1.md) é canônico. Estabelece a organização geral da cidade e os nomes Praça da Colheita, Celeiros da Coroa, Casa do Dízimo, Mercado dos Campos, Moinhos do Vale, Portão do Sul, Estrada de Aurivela e Estrada do Sul.
+
+### Pedra-Mansa — estabelecida
+
+Pedra-Mansa é um povoado construído ao redor de um nó antigo da Muralha. Pessoas e animais dormem melhor perto dele sem saber por quê. Quando o nó é substituído por um selo artificial, começam pesadelos, frio persistente e mortes inexplicáveis.
+
+O [mapa urbano de Pedra-Mansa v1](../imagens/mapa/valedorn/pedra-mansa/pedra-mansa-mapa-urbano-v1.md) é canônico. Representa o mesmo povoado antes e depois da substituição e estabelece seu traçado geral, o Nó Antigo, o Selo Artificial e os efeitos visíveis da ruptura.
+
 Valedorn participou, ao lado de Kharvann, da conquista conjunta do sul. Exerce maior influência sobre Lúmara e divide o controle de Orvena com o império. Apresenta a ocupação como uma missão de proteção contra Nocthar.
 
 ### Rochafria e a Vigília do Corvo
@@ -42,9 +62,9 @@ Valedorn ergueu fortalezas ao longo da Muralha de Cinza para proteger o reino de
 
 O mesmo processo afetou as guildas próximas das montanhas. Companhias como a Vigília do Corvo receberam cada vez menos atenção, contratos, recursos e prestígio, enquanto guildas situadas no interior passaram a concentrar investimentos e oportunidades. Essa negligência ajuda a explicar por que os primeiros sinais da falha da Muralha não recebem resposta proporcional do reino.
 
-A quantidade, a posição, os nomes e o estado individual das fortalezas ainda serão definidos. O [mapa regional de Valedorn v3](../imagens/mapa/valedorn/valedorn-regional-v3.md) representa a proposta visual vigente, com o rio de fronteira desembocando no Lago Partido e os limites com Kharvann, Lúmara e Orvena.
+A quantidade, a posição, os nomes e o estado individual das fortalezas ainda serão definidos. O [mapa regional de Valedorn v4](../imagens/mapa/valedorn/regional/valedorn-regional-v4.md) representa a proposta visual vigente, escolhida pelo autor entre as composições com o Lago Partido, Kharvann, Lúmara e Orvena.
 
-O [mapa de Rochafria e da Marca Cinzenta v1](../imagens/mapa/valedorn/rochafria-marca-cinzenta-v1.md) aproxima a região da Vigília e propõe trilhas, cursos d'água, ruínas defensivas e uma estrada mantida em direção a Aurivela.
+O [mapa de Rochafria e da Marca Cinzenta v1](../imagens/mapa/valedorn/rochafria-marca-cinzenta/rochafria-marca-cinzenta-v1.md) aproxima a região da Vigília e propõe trilhas, cursos d'água, ruínas defensivas e uma estrada mantida em direção a Aurivela.
 
 ## Império de Kharvann — provisório
 
@@ -147,7 +167,12 @@ Mar ocidental, frio e perigoso. Cinzas vindas de Nocthar às vezes cobrem suas �
 - `../imagens/referencias/esboco-mapa-original.png`: esboço fornecido pelo autor.
 - `../imagens/mapa/peninsula-de-vhaleria-v1.png`: versão histórica com o nome provisório substituído.
 - `../imagens/mapa/peninsula-de-arkenor-v2.png`: versão visual canônica e vigente do mapa da Península de Arkenor.
-- `../imagens/mapa/valedorn/valedorn-regional-v1.png`: versão histórica; a margem oriental parecia litoral em vez da fronteira fluvial com Kharvann.
-- `../imagens/mapa/valedorn/valedorn-regional-v2.png`: versão histórica; mostra Kharvann em terra firme, mas posiciona incorretamente o Lago Partido dentro de Valedorn.
-- `../imagens/mapa/valedorn/valedorn-regional-v3.png`: proposta visual vigente; o rio fronteiriço termina no Lago Partido e Lúmara e Orvena aparecem ao sul.
-- `../imagens/mapa/valedorn/rochafria-marca-cinzenta-v1.png`: proposta visual local de Rochafria, do Solar da Vigília e das antigas defesas da Marca Cinzenta.
+- `../imagens/mapa/valedorn/regional/valedorn-regional-v1.png`: versão histórica; a margem oriental parecia litoral em vez da fronteira fluvial com Kharvann.
+- `../imagens/mapa/valedorn/regional/valedorn-regional-v2.png`: versão histórica; mostra Kharvann em terra firme, mas posiciona incorretamente o Lago Partido dentro de Valedorn.
+- `../imagens/mapa/valedorn/regional/valedorn-regional-v3.png`: versão histórica; tentativa de simplificar o rio fronteiriço, preterida pelo autor.
+- `../imagens/mapa/valedorn/regional/valedorn-regional-v4.png`: proposta visual vigente; recupera a primeira composição com o Lago Partido, Lúmara e Orvena, preferida pelo autor.
+- `../imagens/mapa/valedorn/aurivela/aurivela-mapa-urbano-v1.png`: referência visual canônica do mapa urbano da capital e de seu subsolo antigo.
+- `../imagens/mapa/valedorn/ponte-regia/ponte-regia-mapa-urbano-v1.png`: referência visual canônica da cidade fronteiriça, da ponte-cidadela e da rota clandestina inferior.
+- `../imagens/mapa/valedorn/campodouro/campodouro-mapa-urbano-v1.png`: referência visual canônica da principal cidade agrícola do Vale de Aurivela, com seus grandes celeiros, festival da colheita e comboios tributários.
+- `../imagens/mapa/valedorn/pedra-mansa/pedra-mansa-mapa-urbano-v1.png`: referência visual canônica de Pedra-Mansa antes e depois da substituição do nó antigo por um selo artificial.
+- `../imagens/mapa/valedorn/rochafria-marca-cinzenta/rochafria-marca-cinzenta-v1.png`: proposta visual local de Rochafria, do Solar da Vigília e das antigas defesas da Marca Cinzenta.

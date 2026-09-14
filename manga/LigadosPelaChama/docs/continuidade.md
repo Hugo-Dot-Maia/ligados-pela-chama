@@ -64,6 +64,12 @@ Este arquivo contém fatos estabelecidos e deve ser consultado antes de escrever
 - Uma criatura diz à protagonista que o mundo está acabando.
 - Essa criatura é um Umbral Menor a meio caminho da ascensão.
 - Valedorn e Kharvann conquistaram o sul juntos.
+- Ponte-Régia é uma cidade fortificada sobre o rio de fronteira entre Valedorn e Kharvann. Oficialmente é um centro comercial e alfandegário; secretamente, as duas potências negociam ali pedra saturada de Ânima e tecnologia de selos artificiais.
+- `ponte-regia-mapa-urbano-v1.png` é a referência visual canônica de Ponte-Régia. A Ponte das Duas Coroas liga as alfândegas fortificadas; Mercado da Fronteira e Bairro dos Armazéns ocupam margens opostas; Câmara Selada e Rota Clandestina conectam os dois governos sob o rio.
+- Campodouro é a principal cidade agrícola do Vale de Aurivela. Possui celeiros imensos e festivais da colheita, em contraste com os impostos cobrados para sustentar a ocupação do sul.
+- `campodouro-mapa-urbano-v1.png` é a referência visual canônica de Campodouro. Estabelece a Praça da Colheita, os Celeiros da Coroa, a Casa do Dízimo, o Mercado dos Campos, os Moinhos do Vale, o Portão do Sul, a Estrada de Aurivela e a Estrada do Sul.
+- Pedra-Mansa é um povoado construído ao redor de um nó antigo da Muralha. Pessoas e animais dormem melhor perto dele sem conhecer a causa. Quando o nó é substituído por um selo artificial, começam pesadelos, frio persistente e mortes inexplicáveis.
+- `pedra-mansa-mapa-urbano-v1.png` é a referência visual canônica de Pedra-Mansa. Estabelece o mesmo povoado antes e depois da substituição, o traçado geral, o Nó Antigo circular e baixo, o Selo Artificial geométrico e os efeitos visíveis do frio persistente.
 - Lúmara, Orvena e Namaris possuem governos fantoches.
 - O nome **Península de Arkenor** é canônico.
 - A Península de Arkenor possui aproximadamente o tamanho da Península Ibérica.
@@ -113,6 +119,8 @@ Este arquivo contém fatos estabelecidos e deve ser consultado antes de escrever
 - O objeto usado pelos heróis chama-se **Relicário do Trono Vazio**. Seus nove aros recolhem os núcleos conscientes e espacialmente estáveis de generais sobreviventes derrotados; ele não captura almas comuns, não fixa Aster ou Ulmar e não ressuscita os nove mortos.
 - Vael não consegue atravessar fisicamente a Muralha. Uma projeção de sombra disfarçada de velho conselheiro da corte entrega o Relicário aos heróis depois que eles ajudam o rei, apresentando-o falsamente como instrumento de contenção.
 - A Muralha de Cinza é a cadeia montanhosa transformada num organismo mágico de Luz e Sombra. Aurivela está sobre seu centro, o **Coração Cinzento**, e a Vigília sobre um nó secundário.
+- `aurivela-mapa-urbano-v1.png` é a referência visual canônica de Aurivela. A capital foi construída no encontro de dois rios, possui três círculos defensivos irregulares e se divide em Cidade Baixa, Distrito dos Arsenais, Cidade da Coroa e Anel Interditado.
+- Sob Aurivela, galerias antigas de organização radial convergem para uma câmara circular que contém o Coração Cinzento esférico. A localização da prisão de Ordan permanece a definir.
 - Durante quinze anos, Vael manipulou governos, guerras, ocupação, mineração e troca dos selos para enfraquecer a península e abrir falhas na Muralha. Ele explorou ambições existentes; as nações continuam responsáveis por suas decisões.
 - Sem uma divindade de origem, os núcleos dos generais se degradam e sua loucura se agrava. Vael promete estabilizá-los e reconduzi-los como generais depois de ascender.
 
