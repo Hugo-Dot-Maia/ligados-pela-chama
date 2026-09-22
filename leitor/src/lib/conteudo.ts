@@ -246,6 +246,11 @@ const SECOES_MUNDO: { id: string; rotulo: string; docs: string[] }[] = [
   { id: 'criaturas', rotulo: 'Criaturas', docs: ['docs/criaturas/umbrais.md'] },
   { id: 'sistema-de-anima', rotulo: 'Sistema de Ânima', docs: ['docs/sistema-de-anima.md', 'docs/sistema-de-chamas.md'] },
   { id: 'referencias', rotulo: 'Referências e esboços', docs: ['docs/referencias-visuais.md'] },
+  { id: 'guildas', rotulo: 'Guildas', docs: ['docs/guildas/valedorn.md'] },
+  { id: 'fauna', rotulo: 'Fauna', docs: ['docs/fauna/valedorn.md'] },
+  { id: 'flora', rotulo: 'Flora', docs: ['docs/flora/valedorn.md'] },
+  { id: 'fenomenos', rotulo: 'Fenômenos', docs: ['docs/fenomenos/valedorn.md'] },
+  { id: 'cultura', rotulo: 'Cultura', docs: ['docs/cultura/valedorn.md'] },
 ];
 
 function tituloDoGrupo(titulo: string): string {

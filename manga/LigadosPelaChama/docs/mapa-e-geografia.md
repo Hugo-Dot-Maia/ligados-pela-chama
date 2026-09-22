@@ -38,6 +38,8 @@ Ponte-Régia é uma cidade fortificada sobre o grande rio de fronteira com Kharv
 
 O [mapa urbano de Ponte-Régia v1](../imagens/mapa/valedorn/ponte-regia/ponte-regia-mapa-urbano-v1.md) é canônico. Estabelece a Ponte das Duas Coroas, alfândegas fortificadas separadas, o Mercado da Fronteira, o Bairro dos Armazéns e uma rede clandestina sob o rio que converge para a Câmara Selada.
 
+As [Duas Margens](guildas/valedorn.md) são uma guilda conjunta de Valedorn e Kharvann ligada à cidade, encarregada de escoltas, espionagem e controle da fronteira. Sua corrupção e dependência de propinas são estabelecidas. Sua sede canônica fica fora da cidade e ocupa as duas margens, com alas fortificadas ligadas por uma travessia privativa.
+
 ### Campodouro — estabelecida
 
 Campodouro é a principal cidade agrícola do Vale de Aurivela. Seus celeiros imensos armazenam a produção regional, e os festivais da colheita celebram a fartura do vale. Essa prosperidade contrasta com os impostos cobrados para sustentar a ocupação do sul.
@@ -56,11 +58,15 @@ Valedorn participou, ao lado de Kharvann, da conquista conjunta do sul. Exerce m
 
 Rochafria é uma pequena cidade situada no pé da Muralha de Cinza. Nas proximidades, a Vigília do Corvo mantém sua sede num pequeno castelo gótico chamado Solar da Vigília. A guilda atua como companhia de mercenários legalizada pelo governo de Valedorn.
 
+A Vigília é a última guilda ativa da Marca Cinzenta. Seu nome preserva o antigo costume montanhês de nomear guildas em homenagem a animais locais e se refere diretamente ao Corvo-cinzento de olhos vermelhos.
+
 ### Fortalezas e guildas da Muralha — estabelecido
 
 Valedorn ergueu fortalezas ao longo da Muralha de Cinza para proteger o reino de uma ameaça que, durante gerações, pareceu nunca chegar. A longa ausência de invasões transformou a defesa ocidental em símbolo de um perigo considerado antigo, exagerado ou encerrado. Parte das fortalezas foi desativada e outras continuaram operando com guarnições reduzidas.
 
-O mesmo processo afetou as guildas próximas das montanhas. Companhias como a Vigília do Corvo receberam cada vez menos atenção, contratos, recursos e prestígio, enquanto guildas situadas no interior passaram a concentrar investimentos e oportunidades. Essa negligência ajuda a explicar por que os primeiros sinais da falha da Muralha não recebem resposta proporcional do reino.
+O mesmo processo afetou as guildas próximas das montanhas. Durante cerca de mil anos de aparente segurança, todas as demais guildas montanhesas desapareceram ou deixaram de funcionar como guildas. A Vigília do Corvo sobreviveu, mas recebeu cada vez menos atenção, contratos, recursos e prestígio, enquanto companhias do interior e das fronteiras politicamente ativas passaram a concentrar investimentos e oportunidades. Essa negligência ajuda a explicar por que os primeiros sinais da falha da Muralha não recebem resposta proporcional do reino.
+
+O [rascunho das principais guildas de Valedorn](guildas/valedorn.md) registra a estrutura inicial de Último Bastião, Duas Margens, Foice Dourada, Sentinelas do Lago Partido e Vigília do Corvo.
 
 A quantidade, a posição, os nomes e o estado individual das fortalezas ainda serão definidos. O [mapa regional de Valedorn v4](../imagens/mapa/valedorn/regional/valedorn-regional-v4.md) representa a proposta visual vigente, escolhida pelo autor entre as composições com o Lago Partido, Kharvann, Lúmara e Orvena.
 
@@ -107,6 +113,8 @@ Região além das montanhas. O solo parece queimado, a vegetação é retorcida 
 ### Lago Partido
 
 Grande lago situado na transição entre os países do norte e do sul. Tratados de conquista e linhas retas o dividiram entre diferentes administrações. Povos ribeirinhos precisam de autorizações para pescar em águas que seus antepassados tratavam como território comum.
+
+As Sentinelas do Lago Partido mantêm uma fortaleza flutuante, parcialmente submersa, capaz de subir o rio que desemboca no lago. Ela vigia as águas fronteiriças diante de Lúmara e Orvena, sem representar soberania de Valedorn sobre o lago inteiro. A [concept art v1 do castelo](../imagens/concept-art/guildas/valedorn/sentinelas-do-lago-partido/castelo-sentinelas-lago-partido-v1.md) é sua referência visual canônica. Limites e regras de patrulha permanecem a definir.
 
 ### Golfo das Coroas
 

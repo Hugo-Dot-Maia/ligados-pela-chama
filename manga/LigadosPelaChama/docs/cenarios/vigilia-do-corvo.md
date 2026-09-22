@@ -10,6 +10,8 @@ A Vigília do Corvo é uma companhia de mercenários licenciada pelo governo de 
 
 Essa legalidade cria uma relação ambígua: a guilda ajuda a população, mas depende de um governo militar que usa guildas como extensão barata de sua autoridade.
 
+A Vigília é a última guilda ainda ativa na Marca Cinzenta. Seu nome homenageia diretamente o Corvo-cinzento de olhos vermelhos e preserva uma tradição perdida das montanhas, onde guildas adotavam nomes de animais locais. Mil anos sem uma ameaça atravessar a Muralha reduziram contratos, recursos e recrutamento; por isso, a companhia sobrevive com orçamento precário enquanto guildas do interior concentram investimento.
+
 ## Solar da Vigília
 
 A sede é um pequeno castelo gótico reaproveitado, construído sobre uma elevação próxima a Rochafria e ao pé da Muralha de Cinza.

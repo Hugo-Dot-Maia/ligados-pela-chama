@@ -39,6 +39,94 @@ Elementos estabelecidos: figura completamente branca, ausência total de rosto e
 - Antagonistas com formas mais rígidas e grande uso de espaço negativo.
 - Evitar reproduzir exatamente o estilo de qualquer artista ou franquia existente.
 
+## Flora de Valedorn
+
+### Raiz-de-brasa — versão 1
+
+![Prancha botânica da Raiz-de-brasa](../imagens/concept-art/flora/valedorn/raiz-de-brasa/raiz-de-brasa-v1.png)
+
+Referência visual canônica. Planta baixa de folhas verde-acinzentadas, flores claras e raiz grossa de casca escura e interior ocre-avermelhado. Vapor e distorção do ar representam calor retido, não fogo ou brilho mágico.
+
+### Lírio-do-pulso — versão 1
+
+![Prancha botânica do Lírio-do-pulso](../imagens/concept-art/flora/valedorn/lirio-do-pulso/lirio-do-pulso-v1.png)
+
+Referência visual canônica. Planta ribeirinha de folhas verde-azuladas e flores marfim com veios rosados ou violetas. A sequência de abertura e fechamento indica água rica em Ânima; exemplares vivos permanecem fechados em regiões drenadas.
+
+### Gira-Lua — versão 1
+
+![Prancha botânica do Gira-Lua](../imagens/concept-art/flora/valedorn/gira-lua/gira-lua-v1.png)
+
+Referência visual canônica. Planta alta semelhante a um girassol, com caule robusto, folhas largas verde-azuladas, pétalas claras com sombras azul-lilás e centro pérola-dourado. Permanece fechada durante o dia e nas demais fases lunares, desabrochando somente à noite sob a lua cheia. Raízes extensas, sementes escuras e cultivo em terreno pedregoso também integram sua aparência aprovada.
+
+### Saudade-Funda — versão 1
+
+![Prancha botânica da Saudade-Funda](../imagens/concept-art/flora/valedorn/saudade-funda/saudade-funda-v1.png)
+
+Referência visual canônica. Planta carnívora colossal de corpo bulboso subterrâneo e flor-boca formada por pétalas carnosas. Raízes claras dotadas de respiradouros alcançam a superfície e liberam névoa; as ilusões assumem aparência humana translúcida. Sua paleta combina marfim, violeta machucado e vinho apagado, e o acesso ao corpo central pode ficar oculto em cavernas, fendas ou depressões do terreno.
+
+## Fauna, fenômenos e cultura de Valedorn
+
+### Cabra-muralheira — versão 1
+
+![Prancha da Cabra-muralheira](../imagens/concept-art/fauna/valedorn/cabra-muralheira/cabra-muralheira-v1.png)
+
+Referência visual canônica. Cabra compacta de encosta, pelagem longa e áspera e chifres naturais, representada em sua reação antecipada às alterações da Muralha.
+
+### Corvo-cinzento — versão 1
+
+![Prancha do Corvo-cinzento](../imagens/concept-art/fauna/valedorn/corvo-cinzento/corvo-cinzento-v1.png)
+
+Referência visual canônica. Corvídeo natural de plumagem cinza-ardósia, extremidades escuras e olhos vermelhos, associado a ninhos próximos de nós mágicos estáveis.
+
+### Cervo-de-rio — versão 1
+
+![Prancha do Cervo-de-rio](../imagens/concept-art/fauna/valedorn/cervo-de-rio/cervo-de-rio-v1.png)
+
+Referência visual canônica. Cervídeo semiaquático de pelagem própria para escoar água, ombros fortes, cascos largos e galhadas compactas voltadas para trás.
+
+### Raposa-das-pedras — versão 1
+
+![Prancha da Raposa-das-pedras](../imagens/concept-art/fauna/valedorn/raposa-das-pedras/raposa-das-pedras-v1.png)
+
+Referência visual canônica. Pequena raposa vermelho-ferrugem e preta, de cauda única muito alongada, observada recolhendo fragmentos minerais aquecidos.
+
+### Mariposa-pálida — versão 1
+
+![Prancha da Mariposa-pálida](../imagens/concept-art/fauna/valedorn/mariposa-palida/mariposa-palida-v1.png)
+
+Referência visual canônica. Mariposa natural de asas branco-giz e marfim, com veios cinza-frio, liberando pó de Ânima durante o voo. O limiar perigoso de concentração permanece aberto.
+
+### Urso cinzento — versão 1
+
+![Prancha do Urso cinzento](../imagens/concept-art/fauna/valedorn/urso-cinzento/urso-cinzento-v1.png)
+
+Referência visual canônica. Predador colossal, maior que um urso-polar, com pelagem cinza-ardósia e carvão, ombros altos e patas enormes, sem qualquer característica mágica.
+
+### Wyrm-de-rio — versão 1
+
+![Prancha do Wyrm-de-rio](../imagens/concept-art/fauna/valedorn/wyrm-de-rio/wyrm-de-rio-v1.png)
+
+Referência visual canônica. Grande animal aquático de corpo serpentiforme e musculoso, cabeça baixa com traços crocodilianos, escamas sobrepostas, cristas semelhantes a nadadeiras e cauda larga. Não possui asas. Apresenta variantes verde e azul naturalmente camufladas na corrente e rompe barragens usando a força do corpo contra estruturas submersas.
+
+### Geada Cinzenta — versão 1
+
+![Prancha da Geada Cinzenta](../imagens/concept-art/fenomenos/valedorn/geada-cinzenta/geada-cinzenta-v1.png)
+
+Referência visual canônica. Uma frente baixa de névoa branca e cinzenta desce da Muralha e cobre a paisagem com gelo fosco, opaco e mineral, que permanece sob o sol sem gotejar. Quando a pulsação se estabiliza, o gelo se desfaz em névoa clara. Símbolos e construções sem identificação na prancha não estabelecem novos mecanismos ou lugares.
+
+### Peso de Retorno — versão 1
+
+![Prancha do Peso de Retorno](../imagens/concept-art/cultura/valedorn/peso-de-retorno/peso-de-retorno-v1.png)
+
+Referência visual canônica. A pequena pedra funerária é lisa, arredondada e marcada por um sulco circular raso. O corpo é envolvido por mortalha simples, e o túmulo baixo é revestido e fechado por blocos e lajes de pedra. Os cemitérios integram as sepulturas à vegetação e à paisagem montanhosa.
+
+### Noite das Muralhas Acesas — versão 1
+
+![Prancha da Noite das Muralhas Acesas](../imagens/concept-art/cultura/valedorn/noite-das-muralhas-acesas/noite-das-muralhas-acesas-v1.png)
+
+Referência visual canônica. Praças lotadas usam decoração em vinho, dourado e folhagens. Veios de luz prateada percorrem ruas de pedra, e a Segunda Muralha cobre o céu noturno como uma aurora arquitetônica, liberando formas luminosas de torres, escudos e criaturas. Fortalezas apagadas podem contrastar com o espetáculo do interior sem definir quando a falha ocorre na cronologia.
+
 ## Aurivela — mapa urbano versão 1
 
 ![Mapa urbano de Aurivela](../imagens/mapa/valedorn/aurivela/aurivela-mapa-urbano-v1.png)
@@ -223,6 +311,16 @@ Pôster simbólico aguardando aprovação. Reúne os dez generais das Sombras co
 A versão 2 estabelece as sete cores do arco-íris como correntes de chama distintas que nascem de um núcleo branco e se unem nos golpes de Mira. As mãos foram refinadas com proporções mais femininas, sem perder a força da postura de combate.
 
 A versão 1 permanece arquivada como histórico visual.
+
+## Guildas de Valedorn — referências canônicas
+
+- [Castelo do Último Bastião](../imagens/concept-art/guildas/valedorn/ultimo-bastiao/castelo-ultimo-bastiao-v1.md) e [uniformes](../imagens/concept-art/guildas/valedorn/ultimo-bastiao/uniformes-ultimo-bastiao-v1.md).
+- [Castelo da Foice Dourada](../imagens/concept-art/guildas/valedorn/foice-dourada/castelo-foice-dourada-v1.md) e [uniformes](../imagens/concept-art/guildas/valedorn/foice-dourada/uniformes-foice-dourada-v1.md).
+- [Castelo das Duas Margens](../imagens/concept-art/guildas/valedorn/duas-margens/castelo-duas-margens-v1.md) e [uniformes](../imagens/concept-art/guildas/valedorn/duas-margens/uniformes-duas-margens-v1.md).
+- [Castelo das Sentinelas do Lago Partido](../imagens/concept-art/guildas/valedorn/sentinelas-do-lago-partido/castelo-sentinelas-lago-partido-v1.md) e [uniformes](../imagens/concept-art/guildas/valedorn/sentinelas-do-lago-partido/uniformes-sentinelas-lago-partido-v1.md).
+- [Mira experimentando os uniformes históricos da Vigília](../imagens/concept-art/guildas/valedorn/vigilia-do-corvo/mira-uniformes-antigos-v1.md), referência canônica de uma cena futura.
+
+As figuras anônimas nas pranchas não criam personagens ou patentes. Detalhes descritos como abertos nos respectivos arquivos continuam flexíveis.
 
 ## Elenco da Vigília do Corvo — propostas de versão 1
 

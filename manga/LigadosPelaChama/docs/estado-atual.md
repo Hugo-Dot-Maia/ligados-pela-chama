@@ -20,6 +20,56 @@ Convenção do projeto: **estabelecido** faz parte da continuidade; **proposta**
 
 **Pedra-Mansa — mapa urbano canônico:** Pedra-Mansa é um povoado construído ao redor de um nó antigo da Muralha, cuja proximidade melhora o sono de pessoas e animais sem que elas conheçam a causa. Após a substituição do nó por um selo artificial, surgem pesadelos, frio persistente e mortes inexplicáveis. O [mapa urbano v1](../imagens/mapa/valedorn/pedra-mansa/pedra-mansa-mapa-urbano-v1.md) estabelece a representação do mesmo povoado antes e depois da mudança, seu traçado geral e a aparência dos dois mecanismos.
 
+**Fauna de Valedorn — Cabra-muralheira:** a fauna local reage à Ânima principalmente por alterações discretas de comportamento, não por poderes generalizados. A Cabra-muralheira percebe mudanças na pulsação da Muralha e abandona as encostas dias antes de uma falha. Isso estabelece o significado do comportamento das cabras na página 11 do piloto. A [concept art v1](../imagens/concept-art/fauna/valedorn/cabra-muralheira/cabra-muralheira-v1.md) é a referência visual canônica.
+
+**Fauna de Valedorn — Corvo-cinzento:** o Corvo-cinzento de olhos vermelhos constrói ninhos perto de nós mágicos estáveis. Seu desaparecimento pode indicar que um selo verdadeiro foi removido e reforça simbolicamente a Vigília do Corvo. A ausência de pássaros na página 11 é compatível com esse comportamento sem identificar todas as aves da cena como corvos. A [concept art v1](../imagens/concept-art/fauna/valedorn/corvo-cinzento/corvo-cinzento-v1.md) é a referência visual canônica.
+
+**Fauna de Valedorn — Cervo-de-rio:** o Cervo-de-rio é semiaquático e migra seguindo correntes naturais de Ânima presentes na água. Barragens militares e fronteiras interromperam suas rotas. A [concept art v1](../imagens/concept-art/fauna/valedorn/cervo-de-rio/cervo-de-rio-v1.md) é a referência visual canônica.
+
+**Fauna de Valedorn — Raposa-das-pedras:** pequena predadora vermelha e preta, com cauda mais longa que a de uma raposa real, que acumula fragmentos minerais aquecidos na toca. Caçadores podem localizar veios de Ânima observando seu comportamento. A [concept art v1](../imagens/concept-art/fauna/valedorn/raposa-das-pedras/raposa-das-pedras-v1.md) é a referência visual canônica.
+
+**Fauna de Valedorn — Mariposa-pálida:** aproxima-se de pessoas em esgotamento grave, atraída pelo processo de recuperação da Ânima, e libera pó de Ânima ao voar. Grandes concentrações são extremamente perigosas. Para o povo, é presságio de morte; para Mira, pode tornar-se sinal clínico. A [concept art v1](../imagens/concept-art/fauna/valedorn/mariposa-palida/mariposa-palida-v1.md) é a referência visual canônica; o mecanismo exato do perigo permanece em aberto.
+
+**Fauna de Valedorn — Urso cinzento:** maior predador da região montanhosa e maior que um urso-polar, mas completamente não mágico. Sua fuga das montanhas indica que algo foi capaz de expulsar o animal dominante da região, tornando a ameaça invisível ainda mais assustadora. A [concept art v1](../imagens/concept-art/fauna/valedorn/urso-cinzento/urso-cinzento-v1.md) é a referência visual canônica.
+
+**Fauna de Valedorn — Wyrm-de-rio:** criatura aquática muito rara e perigosa que vive nos rios. Pode ser verde ou azul, sempre em tons que se disfarçam na água, e ocasionalmente destrói barragens pela força do corpo contra estruturas submersas. A [concept art v1](../imagens/concept-art/fauna/valedorn/wyrm-de-rio/wyrm-de-rio-v1.md) é a referência visual canônica; tamanho, alimentação, relação com a Ânima e motivo dos rompimentos permanecem em aberto.
+
+**Flora de Valedorn — Raiz-de-brasa:** retém calor e auxilia o tratamento inicial de frio e tremores, mas não repõe Ânima; apenas mascara sintomas e pode causar mortes quando usada de maneira irresponsável. A [concept art v1](../imagens/concept-art/flora/valedorn/raiz-de-brasa/raiz-de-brasa-v1.md) é a referência visual canônica. Preparo, dosagem e eventual toxicidade própria permanecem em aberto.
+
+**Flora de Valedorn — Lírio-do-pulso:** abre e fecha num ritmo semelhante a batimentos perto de água rica em Ânima. Em regiões drenadas, permanece fechado, funcionando como indicador natural da condição da água. A [concept art v1](../imagens/concept-art/flora/valedorn/lirio-do-pulso/lirio-do-pulso-v1.md) é a referência visual canônica; ritmo exato, sincronia e outras propriedades permanecem em aberto.
+
+**Flora de Valedorn — Gira-Lua:** planta semelhante a um girassol que desabrocha somente nas noites de lua cheia e acelera a recuperação natural de Ânima, sem criá-la do nada, ressuscitar alguém ou garantir que um corpo incapaz de reagir se recupere. A [concept art v1](../imagens/concept-art/flora/valedorn/gira-lua/gira-lua-v1.md) é a referência visual canônica. Método de uso, intensidade, duração e riscos permanecem em aberto.
+
+**Flora de Valedorn — Saudade-Funda:** espécie mágica colossal cujo corpo permanece enterrado. Suas raízes liberam uma névoa química e mágica que entorpece viajantes e projeta para cada vítima a ilusão de alguém especial, atraindo-a até ser devorada. A [concept art v1](../imagens/concept-art/flora/valedorn/saudade-funda/saudade-funda-v1.md) é a referência visual canônica. Alcance da névoa, leitura afetiva, sinais e resistências permanecem em aberto.
+
+**Fenômenos de Valedorn — Geada Cinzenta:** frente fria proveniente da Muralha de Cinza que deixa uma camada de gelo opaco incapaz de derreter ao sol. O gelo desaparece apenas quando a pulsação da Muralha se estabiliza, tornando a geada um sintoma territorial de instabilidade. A [concept art v1](../imagens/concept-art/fenomenos/valedorn/geada-cinzenta/geada-cinzenta-v1.md) é a referência visual canônica; alcance, duração, frequência e efeitos sobre seres vivos permanecem em aberto.
+
+**Cultura de Valedorn — Peso de Retorno:** os mortos são sepultados em túmulos de pedra com uma pequena pedra colocada sobre o peito. A crença afirma que o Peso de Retorno impede a Ânima de se perder, sem estabelecer que o objeto realmente possua esse poder. A [concept art v1](../imagens/concept-art/cultura/valedorn/peso-de-retorno/peso-de-retorno-v1.md) é a referência visual canônica; condução completa do rito e variações regionais permanecem em aberto.
+
+**Cultura de Valedorn — Noite das Muralhas Acesas:** celebração nacional milenar com comida, música, dança e bebida. À meia-noite, o Acendimento da Segunda Muralha apaga as luzes comuns, conduz chamas prateadas por marcos, ruas e estradas e projeta uma muralha translúcida no céu. A população brinda com “Mais um ano de pé!”. O ritual deriva de um procedimento esquecido de manutenção dos nós da Muralha, hoje prejudicado pelo abandono das fortalezas montanhesas. A [concept art v1](../imagens/concept-art/cultura/valedorn/noite-das-muralhas-acesas/noite-das-muralhas-acesas-v1.md) é a referência visual canônica.
+
+**Guildas de Valedorn — estrutura canônica:** todas prestam contas à Coroa e conservam hierarquias próprias em tempos normais; durante guerra, cerco ou calamidade passam temporariamente à jurisdição do Exército, que define objetivos sem substituir o comando interno. O [documento vigente](guildas/valedorn.md) estabelece quatro níveis oficiais e as patentes de Último Bastião, Duas Margens, Foice Dourada, Sentinelas do Lago Partido e Vigília do Corvo.
+
+**Mira e os uniformes antigos da Vigília — canônico:** numa cena futura ainda sem posição cronológica definida, Mira experimenta alegremente quatro trajes perfeitamente preservados da época mais próspera da guilda. A [concept art v1](../imagens/concept-art/guildas/valedorn/vigilia-do-corvo/mira-uniformes-antigos-v1.md) é a referência visual canônica para os conjuntos de muralha, trilha, atendimento e cerimônia, todos com o corvo negro de asas abertas. Os nomes históricos dos cargos permanecem em aberto.
+
+**Duas Margens — canônica:** guilda binacional de Valedorn e Kharvann ligada a Ponte-Régia, dedicada a escolta comercial, espionagem e controle da fronteira. É profundamente corrupta e funciona à base de propinas. A [concept art do castelo v1](../imagens/concept-art/guildas/valedorn/duas-margens/castelo-duas-margens-v1.md) é canônica e estabelece duas alas fortificadas fora da cidade, unidas por passagem privativa. Seu envolvimento direto nas negociações secretas de minério e selos continua em aberto.
+
+**Uniformes das Duas Margens — canônicos:** a [concept art v1](../imagens/concept-art/guildas/valedorn/duas-margens/uniformes-duas-margens-v1.md) estabelece quatro variações de escolta, fronteira, fiscalização e mensageria, com fecho comum de dois arcos e acentos azuis ou vinho conforme a ala. Não estabelece patentes, personagens nomeados ou brasões nacionais.
+
+**Castelo do Último Bastião — canônico:** a sede fica fora de Aurivela e é maior, mais imponente e muito mais bem conservada que o Solar da Vigília. A [concept art v1](../imagens/concept-art/guildas/valedorn/ultimo-bastiao/castelo-ultimo-bastiao-v1.md) é a referência visual canônica, com seis torres defensivas, torre de menagem, portaria monumental e pátio semicircular.
+
+**Uniformes do Último Bastião — canônicos:** membros menos proficientes em Ânima usam armaduras mais completas; integrantes mais fortes reduzem o metal e ganham roupas leves e individualizadas. A [concept art v1](../imagens/concept-art/guildas/valedorn/ultimo-bastiao/uniformes-ultimo-bastiao-v1.md) estabelece cinco estágios visuais, paleta azul-marinho, marfim, vinho e dourado e brasão de seis linhas. As patentes são Escudo Novo, Bastião, Muralha, Pilar e Primeiro Bastião.
+
+**Castelo da Foice Dourada — canônico:** situado fora de Campodouro, é uma fortaleza menor que o Último Bastião, voltada à guarda de campos e ao trânsito de comboios. A [concept art v1](../imagens/concept-art/guildas/valedorn/foice-dourada/castelo-foice-dourada-v1.md) estabelece portaria larga, pátio de manobra, estábulos, oficinas, torres de vigia e canal defensivo.
+
+**Uniformes da Foice Dourada — canônicos:** a [concept art v1](../imagens/concept-art/guildas/valedorn/foice-dourada/uniformes-foice-dourada-v1.md) estabelece trajes de estrada e patrulha em verde-oliva, ocre e couro, capas adaptadas ao tempo, proteção por função e emblema de espiga com foice. Diferem do Último Bastião na silhueta, nos materiais e na ausência de progressão de armadura por patente.
+
+**Castelo das Sentinelas do Lago Partido — canônico:** a sede flutua no Lago Partido, possui uma parte submersa e pode subir o rio que desemboca nele. As Sentinelas vigiam o lago diante de Lúmara e Orvena, sem que isso implique domínio valedorniano sobre todas as águas. A [concept art v1](../imagens/concept-art/guildas/valedorn/sentinelas-do-lago-partido/castelo-sentinelas-lago-partido-v1.md) é a referência visual canônica: fortaleza naval sobre base larga, torres, cais, galerias submersas, doca interna e bandeiras azul-escuras com emblema dourado de três pontas sobre ondas. Mecanismo de movimento, medidas e regras de patrulha seguem em aberto.
+
+**Uniformes das Sentinelas do Lago Partido — canônicos:** a [concept art v1](../imagens/concept-art/guildas/valedorn/sentinelas-do-lago-partido/uniformes-sentinelas-lago-partido-v1.md) é a referência visual canônica para quatro variações funcionais de patrulha lacustre, com azul-petróleo, latão envelhecido, faixas onduladas, capas curtas e equipamento de convés. As funções podem atravessar as patentes Remador, Vigia, Sondador, Timoneiro e Comandante do Lago; as figuras não são personagens específicos.
+
+**Edras na memória de Valedorn:** a população acredita que Edras foi um comandante humano respeitoso e honrado; feitos sobrenaturais são tratados como exageros. A guilda Último Bastião preserva seu título. Aelyra, que conhece sua verdadeira natureza e seu fim, gargalha dessa versão histórica.
+
 **Deuses primordiais — aparência canônica:** a [concept art v1](../imagens/concept-art/divindades/deuses-primordiais/deuses-primordiais-v1.md) apresenta o Deus da Luz como sol e a Deusa das Sombras como lua, reclinados numa composição circular complementar e carregando junto ao coração o símbolo um do outro. O estilo de afresco ritual com aquarela, tinta e folhas metálicas também está estabelecido. Seus nomes permanecem a definir.
 
 Mangá shōnen de fantasia medieval com alta magia, mistério cósmico e conflito político.
@@ -215,6 +265,11 @@ Foi fixada uma tabela de alturas do Solar e uma regra de câmera: Mira e Téo es
 | Chamas, custos e progressão | `docs/sistema-de-chamas.md` |
 | Países, fronteiras, marcos, ganchos | `docs/mapa-e-geografia.md` |
 | Umbrais e suas classes | `docs/criaturas/umbrais.md` |
+| Fauna de Valedorn | `docs/fauna/valedorn.md` |
+| Flora de Valedorn | `docs/flora/valedorn.md` |
+| Fenômenos de Valedorn | `docs/fenomenos/valedorn.md` |
+| Cultura de Valedorn | `docs/cultura/valedorn.md` |
+| Guildas de Valedorn | `docs/guildas/valedorn.md` |
 | Fichas individuais de personagem | `docs/personagens/` |
 | Aparência canônica aprovada | `docs/referencias-visuais.md` |
 | Solar da Vigília, áreas e alturas | `docs/cenarios/vigilia-do-corvo.md` |

@@ -75,3 +75,4 @@ As chamas emocionais são desbloqueadas por decisões e transformações, não p
 
 - `../../../imagens/concept-art/personagens/guilda-vigilia-do-corvo/mira/mira-v1.png`: aparência inicial canônica.
 - `../../../imagens/concept-art/personagens/guilda-vigilia-do-corvo/mira/chamas/`: estudos dos diferentes estados de chama.
+- [Mira experimentando quatro uniformes antigos da Vigília](../../../imagens/concept-art/guildas/valedorn/vigilia-do-corvo/mira-uniformes-antigos-v1.md): referência visual canônica de uma cena futura ainda sem posição cronológica definida; não substitui sua aparência inicial.

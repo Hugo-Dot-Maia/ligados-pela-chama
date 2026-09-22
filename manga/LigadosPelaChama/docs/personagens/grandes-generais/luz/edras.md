@@ -83,6 +83,12 @@ Passou a interromper falas para corrigir respirações, obrigar soldados a march
 
 Seu aspecto mais perturbador é a alegria. Edras considera cada batalha uma apresentação magnífica, elogia adversários que quase o matam e pede que repitam ataques porque gostou do som produzido.
 
+## Memória em Valedorn — estabelecida
+
+Em Valedorn, Edras sobrevive na memória popular como um antigo comandante humano, respeitoso e honrado. Histórias sobre seus feitos impossíveis são tratadas como exageros patrióticos, e a principal guilda de Aurivela usa o título **Último Bastião** em sua homenagem.
+
+Aelyra conhece o verdadeiro Edras e sabe o fim que ele teve. Ela gargalha diante da imagem solene e domesticada preservada pelo reino. O momento exato dessa reação e quanto ela revela sobre o passado permanecem em aberto.
+
 ## Personalidade — proposta
 
 - Extravagante, inquieto e incapaz de permanecer em silêncio.
